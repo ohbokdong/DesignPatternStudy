@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MiniDuckSimulator",
+            "request": "launch",
+            "mainClass": "week1.younggeun0.MiniDuckSimulator",
+            "projectName": "DesignPatternStudy_2e982970"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MiniDuckSimulator",
+            "request": "launch",
+            "mainClass": "week1.MiniDuckSimulator"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MiniDuckSimulator",
+            "request": "launch",
+            "mainClass": "MiniDuckSimulator"
+        }
+    ]
+}
