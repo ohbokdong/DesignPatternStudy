@@ -11,7 +11,7 @@
             "type": "java",
             "name": "CodeLens (Launch) - MiniDuckSimulator",
             "request": "launch",
-            "mainClass": "week1.MiniDuckSimulator"
+            "mainClass": "week1.younggeun0.MiniDuckSimulator"
         },
         {
             "type": "java",
