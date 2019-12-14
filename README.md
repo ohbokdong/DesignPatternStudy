@@ -6,12 +6,10 @@
 * **진행 방법**
   * **주 중**
     * **개별 공부 진행 후 복습 + 공부 내용 정리 요약 + 관련 프로그래머스 문제풀이**
-    * 각 계정별 브런치( week&lt;주&gt;\_&lt;계정명&gt; )에서 학습 내용 기록(Pull Request는 각자 알아서)
     * 매주 다른 스터디원이 그 주에 해당하는 공부 내용을 정리하여 summary 디렉토리에 **Markdown파일**로 기록
   * **모였을 때**
     * 요약한 사람이 주도로 리뷰(30분)
-    * 프로그래머스 풀이 코드리뷰
-    * 관련  토이 프로그램 작성
+    * 패턴을 사용한 예제 코딩 후 각자 설명
 * **학습 내용**
   * [1주차 - 스트레티지 패턴(younggeun0)](https://github.com/younggeun0/DesignPatternStudy/blob/master/summary/week1_summary.md)
   * [2주차 - 옵저버 패턴()]()
