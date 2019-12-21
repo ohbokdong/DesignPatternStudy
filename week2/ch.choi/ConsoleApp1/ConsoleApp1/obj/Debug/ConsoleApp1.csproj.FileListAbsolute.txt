@@ -1,0 +1,6 @@
+P:\Study\DesignPatternStudy\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+P:\Study\DesignPatternStudy\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+P:\Study\DesignPatternStudy\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+P:\Study\DesignPatternStudy\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+P:\Study\DesignPatternStudy\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+P:\Study\DesignPatternStudy\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
