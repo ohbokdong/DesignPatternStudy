@@ -7,3 +7,8 @@
 /ForecastDisplay.class
 /StatisticsDisplay.class
 /HeatIndexDisplay.class
+/WeatherData2.class
+/CurrentConditionsDisplay2.class
+/SwingObserverExample.class
+/SwingObserverExample$AngelListener.class
+/SwingObserverExample$DevilListener.class
