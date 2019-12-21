@@ -32,7 +32,7 @@
 서로 상호작용을 하는 객체 사이에서는 가능하면 느슨하게 결합하는 디자인을 사용해야 한다
 => 상호의존성 최소화
 
-![01](https://github.com/younggeun0/DesignPatternStudy/blob/master/summary/img/week1_01.jpg?raw=true)
+![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week2_01.png)
 
 
 
@@ -93,4 +93,4 @@ notifyObservers() {
 - 스윙 및 여러 GUI 프레임워크에서 옵저버 패턴이 많이 쓰임
 
 
-![02](https://github.com/younggeun0/DesignPatternStudy/blob/master/summary/img/week1_01.jpg?raw=true)
+![02](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week2_02.png)
