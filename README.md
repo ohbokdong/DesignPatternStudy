@@ -12,7 +12,7 @@
     * 패턴을 사용한 예제 코딩 후 각자 설명
 * **학습 내용**
   * [1주차 - 스트레티지 패턴(younggeun0)](https://github.com/younggeun0/DesignPatternStudy/blob/master/summary/week1_summary.md)
-  * [2주차 - 옵저버 패턴(minj0i)]()
+  * [2주차 - 옵저버 패턴(minj0i)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week2_summary.md)
   * [3주차 - 데코레이터 패턴(sgmsgood)]()
   * [4주차 - 팩토리 패턴(rlawjddbs)]()
   * [5주차 - 싱글턴 패턴(ch.choi)]()
