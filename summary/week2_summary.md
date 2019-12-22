@@ -45,7 +45,7 @@ Observable 수퍼클래스 확장하여 Observable 클래스 만들기
 1. setChanged() 메소드를 호출해서 객체의 상태 바뀜 알림
 2. notifyObservers() 또는 notifyObservers(Object arg) 중 하나의 메소드 호출
 
-### Obserber가 연락 받기
+### Obserer가 연락 받기
 update(Observable o, Object arg)
 - Observable o : 연락을 보내는 주제 객체가 이 인자로 전달
 - Object arg : notifyObservers()메소드에서 인자로 전달된 데이터 객체, 지정 안됐을 경우 null
