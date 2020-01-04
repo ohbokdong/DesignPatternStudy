@@ -127,7 +127,7 @@ public class DarkRoast extends Beverage{
 }
 ```
 ---
-# 데코레이터 패턴을 사용하는 경우
+#### 데코레이터 패턴을 사용하는 경우
 * 클래스 다이어그램 </br>
 ![03](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week3_03.png) 
 * 데코레이터 패턴의 단점</br>
