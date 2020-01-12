@@ -44,7 +44,7 @@ if( type == picnic ){
 피자 가게를 클래스화 한다고 가정하였을 때, 해당 클래스 내부에 피자를 주문하는 메소드가 있다면 이렇게 구성할 수도 있을 것이다.
 
 ```JAVA
-Pizza order(String type){
+Pizza orderPizza(String type){
     Pizza pizza;
     
     if( type.equals("cheese") ){
@@ -82,9 +82,10 @@ public class SimplePizzaFactory{
 ```
 
 ```JAVA
-Pizza order(String type){
+Pizza orderPizza(String type){
 Pizza pizza;
 
+// 본 메소드에서는 더 이상 피자 객체를 생성하지 않는다.
 // if( type.equals("cheese") ){
 //  duck = new CheesePizza();
 // } else if( type.equals("greek") ){
@@ -93,6 +94,7 @@ Pizza pizza;
 //  duck = new PepperoniPizza();
 // }
 
+// 대신 팩토리를 사용하여 피자 객체를 만든다.
 pizza = simplePizzaFactory.createPizza(type);
 
 pizza.prepare();
