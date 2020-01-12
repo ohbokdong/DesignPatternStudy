@@ -5,3 +5,6 @@
 /week1/younggeun0/bak
 /.vscode/*
 .class
+*.json
+*.sqlite
+*.suo
