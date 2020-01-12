@@ -106,5 +106,24 @@ return pizza;
 ```
 간단한 팩토리(Simple Factory)는 디자인 패턴이라고 할 수는 없다. 프로그래밍을 하는데 있어 자주 쓰이는 관용구에 가깝다.
 
+### 간단한 팩토리 클래스 다이어그램
 ![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week4_01.png)
+
+
+피자 가게가 프랜차이즈를 운영하게 되면서, 다른 지점에서도 지역별 차이를 반영하여 피자를 만들어내야 하는 문제가 생겼다.
+뉴욕 스타일, 시카고 스타일 등의 다른 스타일의 피자를 만들게 되었을 때  SimplePizzaFactory를 빼고 지역별로 서로 다른 팩토리( NYPizzaFactory, ChicagoPizzaFactory )를 만들어 사용한다면 아래와 같을 것이다.
+
+```JAVA
+NYPizzaFactory nyFactory = new NYPizzaFactory();
+PizzaSotre nyStore = new PizzaStore(nyFactory);
+nyStore.order("veggie");
+
+ChicagoPizzaFactory chicagoFactory = new ChicagoPizzaFactory();
+PizzaStore chicagoStore = new PizzaStore(chicagoFactory);
+chicagoStore.order("veggie");
+```
+
+위와 같은 방식으로 지점별로 각기 다른 팩토리 클래스를 사용할 경우, 분점별로 독자적인 방법들을 사용하기 시작한다는 문제점이 생긴다. 즉, 피자 가게와 피자 제작 과정 전체를 하나로 묶어주는 프레임워크를 만들어야 한다는 결론이 나온다. 그와 동시에 유연성을 잃어버리면 안 될 것이다.
+
+
 
