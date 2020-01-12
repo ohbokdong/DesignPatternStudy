@@ -125,5 +125,27 @@ chicagoStore.order("veggie");
 
 위와 같은 방식으로 지점별로 각기 다른 팩토리 클래스를 사용할 경우, 분점별로 독자적인 방법들을 사용하기 시작한다는 문제점이 생긴다. 즉, 피자 가게와 피자 제작 과정 전체를 하나로 묶어주는 프레임워크를 만들어야 한다는 결론이 나온다. 그와 동시에 유연성을 잃어버리면 안 될 것이다.
 
+## 피자 가게 프레임워크
+```JAVA
+public abstract class PizzaStore{
+    public Pizza orderPizza(String type){
+        Pizza pizza;
+        
+        pizza = createPizza(type);
+        
+        pizza.prepare();
+        pizza.back();
+        pizza.cut();
+        pizza.box();
+        
+        return pizza;
+    }
+    
+    // 지점별 팩토리 클래스 대신 추상메소드 사용
+    abstract Pizza createPizza(String type);
+}
+```
 
+위와같이 PizzaStore 클래스의 orderPizza() 메소드에 주문 시스템을 갖춰놓는다. 이는 모든 분점에서 주문 시스템이 똑같이 진행되어야 하기 때문이다.
 
+![02](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week4_02.png)
