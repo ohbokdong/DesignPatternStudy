@@ -106,3 +106,5 @@ return pizza;
 ```
 간단한 팩토리(Simple Factory)는 디자인 패턴이라고 할 수는 없다. 프로그래밍을 하는데 있어 자주 쓰이는 관용구에 가깝다.
 
+![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week4_01.png)
+
