@@ -2,7 +2,7 @@
 
 ## 커맨드 패턴 예
 
-![week6_01]()
+![week6_01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_01.png?raw=true)
 
 * **객체 마을 식당**
   * 고객이 주문 - 웨이트리스가 주문서 받아 주방에 전달 - 주방장이 주방에서 요리
@@ -99,7 +99,7 @@ public class RemoteControlTest { // 커맨드 패턴 클라이언트에 해당�
 }
 ```
 
-![week6_02]()
+![week6_02](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_02.jpg?raw=true)
 
 ## 커맨드 패턴
 
@@ -108,7 +108,7 @@ public class RemoteControlTest { // 커맨드 패턴 클라이언트에 해당�
 * 요청을 큐에 저장하거나 로그로 기록할 수도 있고 작업 취소 기능을 지원할 수도 있다
 
 
-![week6_01]()
+![week6_01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_01.png?raw=true)
 
 * 클라이언트는 ConcreteCommand를 생성하고 Receiver를 설정
 * 리시버는 요구사항을 수행하기 위해 어떤 일을 처리해야 하는지 알고 있는 객체
@@ -236,7 +236,7 @@ public class RemoteLoader {
 }
 ```
 
-![week6_03]()
+![week6_03](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_03.png?raw=true)
 
 * **undo**
   * 이전 작업을 수행하는 기능
@@ -359,7 +359,7 @@ public class RemoteLoader {
 }
 ```
 
-![week6_04]()
+![week6_04](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_04.png?raw=true)
 
 * **작업취소 기능을 구현할 때 상태를 사용하는 방법**
   * CeilingFan 클래스 예제
@@ -465,7 +465,7 @@ public class RemoteLoader2 {
 }
 ```
 
-![week6_05]()
+![week6_05](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_05.png?raw=true)
 
 * **여러 커맨드를 한 번에 수행하는 매크로 커맨드**
   * 우선 커맨드에 집어넣을 일련의 커맨드 객체들을 생성
@@ -524,7 +524,7 @@ public class RemoteLoader3 {
 }
 ```
 
-![week6_06]()
+![week6_06](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_06.png?raw=true)
 
 * **커맨드 패턴의 활용1 - 요청을 큐에 저장하기**
 	* 커맨드를 이용하면 컴퓨테이션(Computation)의 한 부분(리시버와 일련의 행동)을 패키지로 묶어서 일급 객체 형태로 전달하는 것도 가능
