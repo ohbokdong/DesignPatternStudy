@@ -1,4 +1,4 @@
-package week6.younggeun0;
+package week6.younggeun0.first;
 
 public class GarageDoor {
 	

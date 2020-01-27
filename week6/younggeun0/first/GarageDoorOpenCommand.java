@@ -1,4 +1,4 @@
-package week6.younggeun0;
+package week6.younggeun0.first;
 
 public class GarageDoorOpenCommand implements Command {
 	GarageDoor gd;
@@ -11,5 +11,11 @@ public class GarageDoorOpenCommand implements Command {
 	public void execute() {
 		gd.up();
 		gd.lightOn();
+	}
+	
+	@Override
+	public void undo() {
+		gd.down();
+		gd.lightOff();
 	}
 }

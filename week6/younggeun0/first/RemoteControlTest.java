@@ -1,4 +1,4 @@
-package week6.younggeun0;
+package week6.younggeun0.first;
 
 public class RemoteControlTest { // 커맨드 패턴 클라인트에 해당하는 부분
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class RemoteControlTest { // 커맨드 패턴 클라인트에 해당하�
 		
 		remote.setCommand(lightOn); // 커맨드 객체를 인보커한테 전달
 		remote.buttonWasPressed(); 
-		remote.setCommand(garageOpen);
+		remote.setCommand(garageOpen);  
 		remote.buttonWasPressed();
 	}
 }
