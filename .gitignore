@@ -4,7 +4,7 @@
 .settings
 /week1/younggeun0/bak
 /.vscode/*
-.class
+*.class
 *.json
 *.sqlite
 *.suo
