@@ -34,7 +34,8 @@
   var foo2 = function() { // 함수표현식
             console.log("hello2");
     }
-
+```
+```JAVASCRIPT
   foo();
   foo2();
   
@@ -44,8 +45,9 @@
   var foo2 = function() { // 함수표현식
             console.log("hello2");
     }
-  
-
+```  
+```JAVASCRIPT
+    // Compile
     var foo2; // [Hoisting] 함수표현식의 변수값 "선언"
   
     function foo() { // [Hoisting] 함수선언문
