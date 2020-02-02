@@ -18,6 +18,7 @@
   * [4주차 - 팩토리 패턴(rlawjddbs)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week4_summary.md)
     * [4주차 보충 - enum(minj0i)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week4_enum_summary.md)
   * [5주차 - 싱글턴 패턴(ch.choi)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week5_summary.md)
+    * [5주차 보충 - Hoisting, Closure, Prototype(minj0i)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week5_minj0i_summary.md)
   * [6주차 - 커맨드 패턴(younggeun0)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week6_summary.md)
   * [7주차 - 어댑터 패턴과 퍼사드 패턴(minj0i)]()
   * [8주차 - 템플릿 메소드 패턴(sgmsgood)]()
