@@ -2,6 +2,7 @@ package week5.younggeun0;
 
 public class CBTest {
 
+	public static void main(String[] args) {
 		
 		ChocolateBoiler cb1 = new ChocolateBoiler();
 		ChocolateBoiler cb2 = new ChocolateBoiler();
