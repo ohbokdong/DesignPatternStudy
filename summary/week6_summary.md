@@ -4,7 +4,7 @@
 
 ![week6_01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week6_01.png?raw=true)
 
-* **어떤 작업을 요청한 쪽하고 그 작업을 처리하는 을 분리시킬 수 있음**
+* **어떤 작업을 요청한 쪽하고 그 작업을 처리하는 쪽을 분리시킬 수 있음**
 
 * **객체 마을 식당**
   * 고객이 주문 - 웨이트리스가 주문서 받아 주방에 전달 - 주방장이 주방에서 요리
