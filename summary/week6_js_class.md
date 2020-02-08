@@ -155,6 +155,19 @@ Object.getPrototypeOf(obj) === Object.prototype; // true
 
 ## 생성자(Constructor)
 
+* 객체 생성하기 위한 방법들
+
+```javascript
+// 객체 리터럴 사용하는 방법
+var a = {};
+
+// Object.create 함수를 사용하는 방법
+var b = Object.create({});
+
+// new 키워드를 이용하는 방법
+var c = new Object();
+```
+
 ### 생성자 정의
 
 ### 인스턴스
