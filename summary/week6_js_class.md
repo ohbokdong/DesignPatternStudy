@@ -141,41 +141,204 @@ const obj = {};
 Object.getPrototypeOf(obj) === Object.prototype; // true
 ```
 
----
-
 ### 프로토타입 체인(Prototype Chain)
 
-### 프로토 타입 체인의 끝
+```javascript
+const parent = {
+  a: 1
+};
+const child = {
+  b: 2
+};
+Object.setPrototypeOf(child, parent);
+console.log(child); // { 'b': 2 }, child에 parent 프로토타입을 set했지만 a속성이 없음
+console.log(child.a); // 1, 그런데 child객체의 a를 출력해보면 출력됨
+```
 
-### 속성 가리기
+* `child.a`처럼 JavaScript 객체 속성에 접근하면 JS 엔진은 `child`객체의 속성만 확인하는 것이 아니라 프로토타입 객체의 속성까지 확인함
+  * 그래서 프로토타입에 해당 이름을 갖는 속성이 있다면 그 속성의 값을 반환함
+* **프로토타입도 객체**, 프로토타입 객체의 프로토타입 객체가 있을 수 있음
+  * 이렇게 계속 이어져 있는 프로토타입의 연쇄를 **프로토타입 체인(prototype chain)**이라 부름
+  * 위 예제처럼  `child` 객체의 프로토타입에도 `a` 속성이 없다면 JS엔진은 프로토타입의 프로토타입까지 확인함
+  * **즉, JS 엔진은 속성 접근자를 통해 어떤 객체의 속성을 확인할 때 프로토타입 체인을 전부 확인**
+
+```javascript
+const obj1 = {
+  a: 1
+};
+
+const obj2 = {
+  b: 2
+};
+
+const obj3 = {
+  c: 3
+};
+
+// `obj3 -> obj2 -> obj1` 과 같이 상속
+Object.setPrototypeOf(obj2, obj1);
+Object.setPrototypeOf(obj3, obj2);
+
+console.log(obj3.a); // `obj3`의 프로토타입의 프로토타입에 존재하는 속성 `a`의 값을 출력
+console.log(obj3.b); // `obj3`의 프로토타입에 존재하는 속성 `b`의 값을 출력
+console.log(obj3.c); // `obj3`에 존재하는 속성 `c`의 값을 출력
+```
+
+* **프로토타입 체인은 눈에 명확히 보이진 않지만 객체의 속성에 접근할 때마다 탐색됨**
+  * 따라서 프로토타입 체인의 깊이가 너무 깊으면 읽기 속도에 영향을 미치므로 주의
+* 어떤 객체가 다른 객체의 프로토타입 체인에 존재하는지 확인하기 위해서 `Object.prototype.isPrototypeOf` 메소드를 사용할 수 있음
+
+```javascript
+obj1.isPrototypeOf(obj3); // true
+obj2.isPrototypeOf(obj3); // true
+```
+
+### 프로토타입 체인의 끝
+
+* JS에서는 객체의 프로토타입으로 객체 또는 null 이외의 값을 지정할 수 없음
+  * 지정하려고 하면 에러나거나 무시됨
+
+```javascript
+Object.create(1); // Uncaught TypeError: Object prototype may only be an Object or null
+```
+
+* `Object.prototype`의 프로토타입을 확인해보면 null이 나옴
+  * 프로토타입 체인을 따라가다 보면 언젠가는 null을 만남 == 프로로타입 체인의 끝
+
+```javascript
+Object.getPrototypeOf(Object.prototype); // null
+```
+
+### 속성 가리기(Proterty Shadowing)
+
+```javascript
+const parent = {
+  prop: 1
+};
+
+const child = {
+  prop: 2
+};
+
+Object.setPrototypeOf(child, parent); // `child`의 프로토타입을 `parent`로 재설정합니다.
+
+child.prop; // 2
+```
+
+* 프로토타입 체인에서 같은 이름의 속성이 여러 번 등장하면?
+  * **프로토타입 체인의 상위에 속성이 하위 속성에 의해 가려짐**
+  * 이런 현상을 **속성 가리기(Property Shadowing)**이라고 함
 
 ### 프로토타입을 간접적으로 변경하는 것은 불가능
 
----
+* **어떤 객체의 속성을 변경하거나 삭제하는 작업은 그 객체의 프로토타입에 아무런 영향을 미치지 않음**
+
+```javascript
+const parent = {
+  prop: '😝'
+};
+
+const child = Object.create(parent);
+
+// 프로토타입 객체의 속성을 간접적으로 삭제하는 것은 불가능합니다.
+delete child.prop;
+parent.prop; // '😝'
+
+// 프로토타입 객체의 속성을 간접적으로 변경하는 것은 불가능합니다.
+child.prop = '💀';
+parent.prop; // '😝'
+child.prop; // '💀'
+```
+
 
 ## 생성자(Constructor)
 
 * 객체 생성하기 위한 방법들
 
 ```javascript
-// 객체 리터럴 사용하는 방법
+// 객체 리터럴 사용하여 생성하는 방법
 var a = {};
 
-// Object.create 함수를 사용하는 방법
+// Object.create 함수에 프로토타입을 넣어 생성하는 방법
 var b = Object.create({});
 
-// new 키워드를 이용하는 방법
+
+// new 키워드를 이용하여 생성하는 방법
 var c = new Object();
+```
+
+* `Object`는 함수, **new 키워드와 함께 사용하는 함수를 생성자(constructor)라고 함**
+
+```javascript
+typeof Object; // 'function'
 ```
 
 ### 생성자 정의
 
+```javascript
+// 생성자 정의
+function Person(name) {
+  this.name = name;
+}
+
+// 생성자를 통한 객체 생성
+const person1 = new Person('오영근');
+```
+
+* 위에서 `function` 구문을 통해 `Person`이라는 생성자를 정의하고, 생성자 안에서는 `this`키워드를 사용해서 새로 만들어질 객체의 속성을 지정
+  * 생성자의 이름으로는 식별자로 사용할 수 있는 것이면 뭐든지 사용 가능
+  * **변수와 다르게 대문자로 시작하게 짓는게 관례**
+
 ### 인스턴스
+
+* 생성자를 통해 생성된 객체를 그 생성자의 **인스턴스(Instance)**라고 함
+  * `instanceof`연산자를 사용하면 객체가 특정 생성자의 인스턴스가 맞는지 확인가능
+
+```javascript
+person1 instanceof Person; // true
+
+const obj = {}; // 객체 리터럴을 통해 생성된 객체는 Object의 인스턴스
+obj instanceof Object; // true
+```
 
 ### 생성자와 프로토타입
 
+* **생성자를 통해 만들어낸 객체의 프로토타입에는 생성자의 `prototype` 속성에 저장되어 있는 객체가 자동으로 지정됨**
+
+```javascript
+Object.getPrototypeOf(person1) === Person.prototype; // true
+```
+
+* JS에서는 `function` 구문을 통해 함수를 정의할 때 함수의 `prototype` 속성에 객체가 자동으로 생성되어 저장됨
+
+```javascript
+function Person() {
+  // ...
+}
+typeof Person.prototype; // 'object'
+```
+
 ### constructor
 
+* 생성자의 `prototype` 속성에 자동 생성되는 객체에는 `constructor`라는 특별한 속성이 존재
+  * **이 속성에는 생성자 자신이 저장됨**
+
+```javascript
+function Person() {
+  // ...
+}
+Person.prototype.constructor === Person; // true
+```
+
+* 이를 통해, 어떤 객체가 어떤 생성자로부터 생성되었는지를 `constructor` 속성을 통해 알아낼 수 있음
+
+```javascript
+function Person() {
+  // ...
+}
+const person = new Person();
+person.constructor === Person;
+```
 
 ### 펙토리 함수의 재정의
 
