@@ -1,0 +1,6 @@
+P:\Study\DesignPatternStudy\Week6\Week6\bin\Debug\Week6.exe.config
+P:\Study\DesignPatternStudy\Week6\Week6\bin\Debug\Week6.exe
+P:\Study\DesignPatternStudy\Week6\Week6\bin\Debug\Week6.pdb
+P:\Study\DesignPatternStudy\Week6\Week6\obj\Debug\Week6.csprojAssemblyReference.cache
+P:\Study\DesignPatternStudy\Week6\Week6\obj\Debug\Week6.exe
+P:\Study\DesignPatternStudy\Week6\Week6\obj\Debug\Week6.pdb
