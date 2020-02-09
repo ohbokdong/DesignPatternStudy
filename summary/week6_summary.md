@@ -347,7 +347,7 @@ public class RemoteLoader {
     rc.offButtonWasPushed(0);
     
     System.out.println("----undo!----");
-    rc.undoCommand.undo();
+    rc.undoButtonWasPushed();
     System.out.println("-------------");
     
     rc.onButtonWasPushed(1);
@@ -356,7 +356,7 @@ public class RemoteLoader {
     rc.onButtonWasPushed(2);
     rc.offButtonWasPushed(2);
     
-    rc.undoCommand.undo();
+    rc.undoButtonWasPushed();
   }
 }
 ```
