@@ -1,10 +1,10 @@
 # eclipse
-
+/bin/
 .classpath
 .project
 .settings
 /week1/younggeun0/bak
-
+/.vscode/*
 *.class
 *.json
 *.sqlite
