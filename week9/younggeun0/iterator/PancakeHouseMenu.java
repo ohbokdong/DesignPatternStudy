@@ -19,8 +19,9 @@ public class PancakeHouseMenu {
 		menuItems.add(new MenuItem(name, description, vegetarian, price));
 	}
 	
-	public ArrayList<MenuItem> getMenuItems() {
-		return menuItems;
+	public Iterator createIterator() {
+		Iterator iterator = new PancakeHouseIterator(menuItems);
+		return iterator;
 	}
 	
 	// 기타 메뉴 관련 메소드(ArrayList를 이용해서 구현한 코드에 의존하는 다른 코드들이 있다 가정)
