@@ -3,6 +3,27 @@
 * 메소드에서 일련의 알고리즘의 골격을 정의합니다.
 * 그 중 한 개 이상의 단계가 서브클래스에 의해 제공될 수 있습니다.
 * 서브클래스에서 일부분을 구현할 수 있도록 하면서도 알고리즘의 구조는 바꾸지 않아도 되도록 할 수 있습니다.
+```java
+public abstract class CaffeineBeverage {
+	final void prepareRecipe() {
+		boilWater();
+		brew();
+		pourInCup();
+		addCondiments();
+	}
+	
+	abstract void brew();
+	abstract void addCondiments();
+	
+	void boilWater() {
+		System.out.println("물 끓이는 중");
+	}
+	
+	void pourInCup() {
+		System.out.println("컵에 따르는 중");
+	}
+}
+```
 
 ## 2. 템플릿 메소드와 후크
 1. 후크 (hook)란? </br>
