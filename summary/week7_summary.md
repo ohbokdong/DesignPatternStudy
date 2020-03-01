@@ -156,6 +156,7 @@ public class EnumerationIterator implements Iterator
   }
 }
 ```
+- (실행 안됨)JDK1.5이상부터 enum은 예약어이므로 변수명으로 사용할 수 없음.
 
 ## 파사드 패턴(Facade Pattern)
 Facade는 '외관'이란 단어의 의미로 사용됨
