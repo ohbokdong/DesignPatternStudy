@@ -22,7 +22,7 @@
   * [6주차 - 커맨드 패턴(younggeun0)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week6_summary.md)
     * [6주차 보충 - JS Object, Class](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week6_js_class.md)
   * [7주차 - 어댑터 패턴과 퍼사드 패턴(minj0i)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week7_summary.md)
-  * [8주차 - 템플릿 메소드 패턴(sgmsgood)]()
+  * [8주차 - 템플릿 메소드 패턴(sgmsgood)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week8_summary.md)
   * [9주차 - 이터레이터와 컴포지트 패턴(rlawjddbs)]()
   * [10주차 - 스테이트 패턴(ch.choi)]()
   * [11주차 - 프록시 패턴(younggeun0)]()
