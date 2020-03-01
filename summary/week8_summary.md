@@ -15,6 +15,39 @@
     * 예로, 내부적으로 어떤 목록을 재정렬한 후에 서브클래스에서 어떤 작업(화면상에 표시되는 내용을 다시 보여주는 등)을 수헹하고 싶은 경우에 justReOrderedList()후크 메소드를 사용할 수 있습니다.
 * 서브클래스에 추상 클래스에서 진행되는 작업에 대한 결정을 내리는 기능을 부여하기 위한 용도로 후크를 쓸 수도 있습니다.
 
+```java
+public abstract class CaffeineBeverageWithHook {
+	void prepareRecipe() {
+		boilWater();
+		brew();
+		pourInCup();
+		
+		/*
+		 * customerWantsCondiments()라는 구상 메소드에 의해 실행여부가 결정되는 조건문 추가.
+		 * 손님이 첨가물을 넣어달라고 했을 때만, customerWantsCondiments()에서 참이 리턴되면
+		 * addCondiments()를 호출합니다.*/
+		if(customerWantsCondiments()) {
+			addCondiments();
+		}
+	}
+	
+	abstract void brew();
+	abstract void addCondiments();
+	
+	void boilWater() {
+		System.out.println("물 끓는 중");
+	}
+	
+	void pourInCup() { 
+		System.out.println("컵에 따르는 중");
+	}
+	
+	boolean customerWantsCondiments() {
+		return true;
+	}
+}
+```
+
 ## * 템플릿 메소드를 사용할 때 주의해야할 점 * 
 * 추상 클래스를 상속받은 서브클래스는 추상 클래스의 메소드를 모두 구현해야 합니다. 
 * 추상 메소드가 너무 많아지면 서브클래스에서 일일이 구현을 해줘야하므로 유지보수가 힘들어질 가능성이 커집니다. 
