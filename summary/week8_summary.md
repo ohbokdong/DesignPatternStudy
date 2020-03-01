@@ -110,6 +110,7 @@ class Array{
 
     /* 1. 정렬 알고리즘이 들어있습니다.
     *  2. compareTo() 메소드에 의해 결과가 결정됩니다.
+    *  mergeSort()가 템플릿 패턴 메소드입니다.😊
     */
     private static void mergeSort(Object src [], Object dest [], int low, int high, int off) {
         for (int i = low; i<high; i++) {
