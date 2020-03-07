@@ -1,9 +1,11 @@
-package week9.minj0i.iterator;
+package week9.minj0i.iterator2;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class PancakeHouseMenu3 {
+import week9.minj0i.iterator.MenuItem;
+
+public class PancakeHouseMenu3 implements Menu {
 	ArrayList menuItems;
 	
 	public PancakeHouseMenu3() {
@@ -33,7 +35,6 @@ public class PancakeHouseMenu3 {
 	}
 	
 	public Iterator createIterator() {
-		//return new PancakeHouseIterator(menuItems);
 		return menuItems.iterator();
 	}
 	

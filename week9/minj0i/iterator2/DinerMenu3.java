@@ -1,6 +1,8 @@
-package week9.minj0i.iterator;
+package week9.minj0i.iterator2;
 
-public class DinerMenu3 {
+import java.util.Iterator;
+
+public class DinerMenu3 implements Menu {
 	static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
 	MenuItem[] menuItems;
@@ -31,7 +33,7 @@ public class DinerMenu3 {
 		}
 	}
 	
-	public java.util.Iterator createIterator() {
+	public Iterator createIterator() {
 		return new DinerMenuIterator2(menuItems);
 	}
 }

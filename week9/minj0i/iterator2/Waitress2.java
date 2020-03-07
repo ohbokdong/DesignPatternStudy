@@ -1,14 +1,12 @@
-package week9.minj0i.iterator;
+package week9.minj0i.iterator2;
 
-import week9.minj0i.iterator.Iterator;
-import week9.minj0i.iterator.MenuItem;
-import week9.minj0i.iterator2.Menu;
+import java.util.Iterator;
 
-public class Waitress {
-	PancakeHouseMenu2 pancakeHouseMenu;
-	DinerMenu2 dinerMenu;
+public class Waitress2 {
+	Menu pancakeHouseMenu;
+	Menu dinerMenu;
 	
-	public Waitress(PancakeHouseMenu2 pancakeHouseMenu, DinerMenu2 dinerMenu) {
+	public Waitress2(Menu pancakeHouseMenu, Menu dinerMenu) {
 		this.pancakeHouseMenu = pancakeHouseMenu;
 		this.dinerMenu = dinerMenu;
 	}
