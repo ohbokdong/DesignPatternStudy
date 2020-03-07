@@ -1,10 +1,10 @@
-package week4.factory;
+package week4;
 
 public class SimplePizzaFactory {
 
-	public PizzaStore createPizza(String type) {
-		PizzaStore pizza = null;
-
+	public Pizza2 createPizza(String type) {
+		Pizza2 pizza = null;
+		
 		if(type.equals("cheese")) {
 			pizza = new CheesePizza();
 		} else if(type.equals("pepperoni")) {
@@ -14,8 +14,8 @@ public class SimplePizzaFactory {
 		} else if(type.equals("veggie")) {
 			pizza = new VeggiePizza();
 		} // end else if
-
+		
 		return pizza;
 	} // createPizza
-
+	
 } // class

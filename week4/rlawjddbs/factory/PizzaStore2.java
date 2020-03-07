@@ -1,9 +1,9 @@
 package week4;
 
-public abstract class PizzaStore {
+public abstract class PizzaStore2 {
 	
-	public Pizza orderPizza(String type) {
-		Pizza pizza;
+	public Pizza2 orderPizza(String type) {
+		Pizza2 pizza;
 		
 		pizza = createPizza(type);
 		
@@ -15,6 +15,6 @@ public abstract class PizzaStore {
 		return pizza;
 	} // orderPizza
 	
-	protected abstract Pizza createPizza(String type);
+	protected abstract Pizza2 createPizza(String type);
 	
 } // class

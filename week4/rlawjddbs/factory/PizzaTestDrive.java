@@ -1,23 +1,20 @@
-package week4.factory;
+package week4;
 
 public class PizzaTestDrive {
 
 	public static void main(String[] args) {
-		PizzaStore nyStore = new NYPizzaStore();
-		PizzaStore chicagoStore = new ChicagoPizzaStore();
-		PizzaStore californiaStore = new CaliforniaPizzaStore();
-
-		Pizza pizza = nyStore.createPizza("pepperoni");
-		System.out.println("Jungyun ordered a "+pizza.getName());
-
-		pizza = chicagoStore.createPizza("cheese");
-		System.out.println("Jungyun ordered a "+pizza.getName());
-
-		pizza = californiaStore.createPizza("apple");
-		System.out.println("Jungyun ordered a "+pizza.getName());
-		for(Object topping : pizza.toppings) {
-			System.out.println(topping);
-		} // end for
+//		PizzaStore nyStore = new NYPizzaStore();
+//		PizzaStore chicagoStore = new ChicagoPizzaStore();
+//		
+//		Pizza pizza = nyStore.orderPizza("cheese");
+//		System.out.println("Ethan ordered a " + pizza.getName() + "\n");
+//		
+//		pizza = chicagoStore.orderPizza("cheese");
+//		System.out.println("Joel ordered a " + pizza.getName() + "\n");
+		
+		PizzaStore2 nyPizzaStore = new NYPizzaStore2();
+		nyPizzaStore.orderPizza("pepperoni");
+		
 	} // main
 
 } // class

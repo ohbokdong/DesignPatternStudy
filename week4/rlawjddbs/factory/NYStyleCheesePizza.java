@@ -1,4 +1,4 @@
-package week4.factory;
+package week4;
 
 public class NYStyleCheesePizza extends Pizza {
 
@@ -6,8 +6,8 @@ public class NYStyleCheesePizza extends Pizza {
 		name = "NY Style Sauce and Cheese Pizza";
 		dough = "Thin Crust Dough";
 		sauce = "Marinara Sauce";
-
-		toppings.add("Grated Reggiano Cheese");
-	} // NYStyleCheesePizza
-
-} // class
+		
+		toppings.add("Great Reggiano Cheese");
+	}
+	
+}

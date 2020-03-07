@@ -1,20 +1,20 @@
-package week4.factory;
+package week4;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
 	@Override
-	protected Pizza createPizza(String item) {
-		if (item.equals("cheese")) {
+	protected Pizza createPizza(String type) {
+		
+		if(type.equals("cheese")) {
 			return new ChicagoStyleCheesePizza();
-		} else if (item.equals("veggie")) {
-			return new ChicagoStyleVeggiePizza();
-		} else if (item.equals("clam")) {
-			return new ChicagoStyleClamPizza();
-		} else if (item.equals("pepperoni")) {
+		} else if(type.equals("pepperoni")) {
 			return new ChicagoStylePepperoniPizza();
-		} else {
-			return null;
-		} // end else
+		} else if(type.equals("clam")) {
+			return new ChicagoStyleClamPizza();
+		} else if(type.equals("veggie")) {
+			return new ChicagoStyleVeggiePizza();
+		} else return null;
+		
 	} // createPizza
 
-} // class
+}

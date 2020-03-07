@@ -1,13 +1,18 @@
-package week4.factory;
+package week4;
 
 public class NYStylePepperoniPizza extends Pizza {
 
 	public NYStylePepperoniPizza() {
-		name = "NY Style Sauce and Pepperoni Pizza";
-		dough = "Thin Crust Dough";
-		sauce = "Marinara Sauce";
-
-		toppings.add("Sweet and Hot Pepperonies");
-	} // NYStyleCheesePizza
-
+		name = "Chicago Style Sauce and Pepperoni Pizza";
+		dough = "Extra Thick Crust Dough";
+		sauce = "Plum Tomato Sauce";
+		
+		toppings.add("Pepperoni");
+	}
+	
+	@Override
+	void cut() {
+		System.out.println("Cutting the pizza into square slices");
+	} // cut
+	
 } // class
