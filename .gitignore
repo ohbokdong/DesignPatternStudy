@@ -9,3 +9,4 @@
 *.json
 *.sqlite
 *.suo
+summary/.DS_Store
