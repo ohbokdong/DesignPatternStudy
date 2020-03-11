@@ -7,8 +7,9 @@
   
 
 ![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_01.png)  
-PancakeHouse와 DinerMenu는 동일한 메뉴 항목을 나타내는 MenuItem을 구현하지만 MenuItem의 집합체를 다루는 방식은 다르다.  
+PancakeHouse와 DinerMenu는 동일한 메뉴 항목을 나타내는 MenuItem을 가지고 있으나 MenuItem의 집합체를 다루는 방식은 다르다.  
 각기 다른 방식으로 집합체를 다루는 PancakeHouse와 DinerMenu의 객체를 사용하는 Waitress 클라이언트 클래스는 두 객체가 가진 모든 MenuItem 항목을 출력하는 printMenu() 메소드가 있다.
+
 
 
 ## 컴포지트 패턴 (Composite Pattern)
