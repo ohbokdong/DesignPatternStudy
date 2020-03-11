@@ -4,7 +4,7 @@
 * 클라이언트에게 컬렉션 안의 내부 구조를 노출하지 않으면서 원소들에 접근할 수 있는 방법을 제공하는 패턴
 * 클라이언트로 부터 각기 다른 컬렉션(집합체)을 일획화하여 다룰 수 있는 방법을 제공
 * 컬렉션의 모든 원소들에게 접근하기 위한 반복적인 작업을 컬렉션에서 분리시킬 수 있음 
-
+![01](https://github.com/younggeun0/DesignPatternStudy/blob/master/summary/img/week9_01.png?raw=true)
 
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
