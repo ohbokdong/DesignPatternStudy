@@ -31,9 +31,23 @@ for (int i = 0; i < lunchItems.length; i++){
 }
 ```
 Waitress 는 결국 위와 같은 방식으로 항상 두 식당의 메뉴를 이용할 때 각 아이템에 대해서 반복적인 작업을 수행하기 위해 두 개의 순환문을 써야 된다. 만약 MenuItem을 또 다른 방법으로 구현하는 레스토랑이 또 추가된다면 순환문이 세 개가 필요하게 된다.  
+
+#### 반복작업의 캡슐화
+서로 다른 자료형의 집합체를 가진 두 객체를 동일한 인터페이스에 의존하도록 수정한다면 반복작업을 캡슐화 할 수 있다.  
+
+```java
+public interface Iterator {
+    boolean hasNext();
+    Object next();
+}
+```
+
+```java
+
+```
   
 ```java
-public class Waitress
+public class Waitress {
     ...
     public void printMenu(){
         Iterator pancakeHouseIterator = pancakeHouseMenu.createIterator();
@@ -53,7 +67,7 @@ public class Waitress
     ...
 }
 ```
-위와 같이 PancakeHouseMenu 와 DinerMenu 클래스가 동일한 인터페이스인 Iterator를 구현하였다는 가정하에 코드를 작성한다면 클라이언트 클래스 Waitress는 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일한 방법으로 출력할 수 있게 된다.
+위와 같이 PancakeHouseMenu와 DinerMenu 클래스가 동일한 인터페이스인 Iterator를 구현하였다는 가정하에 코드를 작성한다면 클라이언트 클래스 Waitress는 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일한 방법으로 출력할 수 있게 된다.
 
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
