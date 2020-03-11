@@ -7,7 +7,7 @@
   
 
 ![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_01.png)  
-PancakeHouse와 DinerMenu는 동일한 메뉴 항목을 나타내는 MenuItem을 가지고 있으나 각각 ArrayList와 배열을 사용하여 MenuItem의 집합체를 다루는 방식이 다르다. 각기 다른 방식으로 집합체를 다루는 PancakeHouse와 DinerMenu의 객체를 사용하는 Waitress 클라이언트 클래스는 두 객체가 가진 모든 MenuItem 항목을 출력하는 printMenu() 메소드가 있다.
+PancakeHouse와 DinerMenu는 동일한 메뉴 항목을 나타내는 MenuItem을 가지고 있으나 각각 ArrayList와 배열을 사용하기 때문에  MenuItem의 집합체를 다루는 방식이 다르다. 각기 다른 방식으로 집합체를 다루는 PancakeHouse와 DinerMenu의 객체를 사용하는 Waitress 클라이언트 클래스는 두 객체가 가진 모든 MenuItem 항목을 출력하는 printMenu() 메소드가 있다.
 
 ```java
 // Waitress 클래스의 printMenu() 메소드 소스
