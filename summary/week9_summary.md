@@ -53,7 +53,7 @@ public class Waitress
     ...
 }
 ```
-위와 같이 PancakeHouseMenu 와 DinerMenu 클래스가 동일한 인터페이스인 Iterator를 구현한다면 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 MenuItem 객체의 집합체를 동일하게 다룰 수 있게 된다. 
+위와 같이 PancakeHouseMenu 와 DinerMenu 클래스가 동일한 인터페이스인 Iterator를 구현한다면 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일하게 다룰 수 있게 된다. 
 
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
