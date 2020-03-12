@@ -6,15 +6,17 @@ public class GumballMachine2 {
 	State noQuarterState;
 	State hasQuarterState;
 	State soldState;
+	State winnerState;
 	
 	State state = soldOutState; // 상태 초기화
 	int count = 0;
 	
 	public GumballMachine2(int numberGumballs) {
-		soldOutState = new SoldState(this);
+		soldOutState = new SoldOutState(this);
 		noQuarterState = new NoQuarterState(this);
 		hasQuarterState = new HasQuarterState(this);
-		soldOutState = new SoldState(this);
+		soldState = new SoldState(this);
+		winnerState = new WinnerState(this);
 		
 		this.count = numberGumballs;
 		if (numberGumballs > 0) {
@@ -49,7 +51,6 @@ public class GumballMachine2 {
 	public State getSoldOutState() {
 		return soldOutState;
 	}
-
 	public State getNoQuarterState() {
 		return noQuarterState;
 	}
@@ -57,7 +58,9 @@ public class GumballMachine2 {
 	public State getHasQuarterState() {
 		return hasQuarterState;
 	}
-
+	public State getWinnerState() {
+		return winnerState;
+	}
 	public State getSoldState() {
 		return soldState;
 	}
