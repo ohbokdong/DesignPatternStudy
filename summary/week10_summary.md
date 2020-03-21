@@ -29,9 +29,14 @@
 
 뽑기 기계를 제작 요청이 옴
 
+![State](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/Week10/state.jpg?raw=true)
+
+
 **상태 : 동전 있음, 동전 없음, 알맹이 판매, 알맹이 매진**
 
 **행동 : 동전 투입, 동전 반환, 손잡이 돌림, 알맹이 내보냄**
+
+
 
 --이미지
 
@@ -47,6 +52,8 @@
 뽑기 기계에 대한 기능 확장 요구, 해결방법 1로 확장을 하려니 너무 많은 코드를  수정해야함
 
 OCP 가 지켜지지않음, 캡슐화 x, 버그 가능성 UP, 상태전환 파악 어려움
+
+![State](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/Week10/State2.jpg?raw=true)
 
 **상태 : 동전 있음, 동전 없음, 알맹이 판매, 알맹이 매진, 당첨**
 
@@ -152,4 +159,22 @@ State 구성을 통해서 객체를 유연하게 바꿈
 2. IF선언문 삭제
 3. 상태 변경에 대하여 닫혀 있고 새로운 상태 클래스를 추가하여 확장 가능 (OCP)
 4. 이해하기 좋은 코드와 구조가 됨
+
+------------------------
+
+## 스테이트 패턴과 스트래티지 패턴
+
+
+## 스테이트 패턴 클래스 다이어 그램
+
+![class](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/Week10/statapattern.png?raw=true)
+
+스테이트 패턴은 상태를 기반으로 행동을 캡슐화 하고 행동을 현재 상태에 위임
+
+
+## 스트래티지 패턴 클래스 다이어 그램
+![class](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/Week10/strategy_pattern.png?raw=true)
+
+
+스트래티지 패턴은 구현 방법을 서브클래스에서 구현하고 어떤 전략을 사용할지 직접 결정
 
