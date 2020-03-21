@@ -2,11 +2,11 @@ package week10.younggeun0.state.staticway;
 
 public class GumballMachine {
 	// 이제 정적 변수를 사용하던 기존 코드를 새로 만든 클래스를 사용하는 방식으로 수정
-	static State soldOutState = new SoldOutState();
-	static State noQuarterState = new NoQuarterState();
-	static State hasQuarterState = new HasQuarterState();
-	static State soldState = new SoldState();
-	static State winnerState = new WinnerState();
+	static final State soldOutState = new SoldOutState();
+	static final State noQuarterState = new NoQuarterState();
+	static final State hasQuarterState = new HasQuarterState();
+	static final State soldState = new SoldState();
+	static final State winnerState = new WinnerState();
 	
 	State state = soldOutState; // 상태 초기화
 	int count = 0;
