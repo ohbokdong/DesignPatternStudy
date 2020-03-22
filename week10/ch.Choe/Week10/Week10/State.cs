@@ -8,9 +8,9 @@ namespace Week10
 {
     interface State
     {
-        void InsertQuarter();
-        void EjectQuarter();
-        void TurnCrack();
-        void Dispense();
+        void InsertQuarter(machine m);
+        void EjectQuarter(machine m);
+        void TurnCrack(machine m);
+        void Dispense(machine m);
     }
 }
