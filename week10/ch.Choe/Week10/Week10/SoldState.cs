@@ -8,37 +8,37 @@ namespace Week10
 {
     class SoldState : State
     {
-        GumballMachine m_GumballMachine;
+        //GumballMachine m_GumballMachine;
 
-        public SoldState(GumballMachine machine)
+        public static SoldState(GumballMachine machine)
         {
-            m_GumballMachine = machine;
+            //m_GumballMachine = machine;
         }
-        public void Dispense()
+        public static void Dispense(machine m)
         {
             Console.WriteLine("알맹이가 나가고 있습니다.");
-            m_GumballMachine.ReleaseBall();
+            m.ReleaseBall();
             if(m_GumballMachine.Getcount() > 0)
             {
-                m_GumballMachine.SetState(GumballMachine.StateType.NoQuarter);
+                m.SetState(GumballMachine.StateType.NoQuarter);
             }
             else
             {
-                m_GumballMachine.SetState(GumballMachine.StateType.Soldout);
+                m.SetState(GumballMachine.StateType.Soldout);
             }
         }
 
-        public void EjectQuarter()
+        public static void EjectQuarter()
         {
             Console.WriteLine("이미 뽑았습니다.");
         }
 
-        public void InsertQuarter()
+        public static void InsertQuarter()
         {
             Console.WriteLine("잠깐 기다려 주세요.");
         }
 
-        public void TurnCrack()
+        public static void TurnCrack()
         {
             Console.WriteLine("손잡이는 한번만.");
         }
