@@ -25,7 +25,7 @@
   * [8주차 - 템플릿 메소드 패턴(sgmsgood)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week8_summary.md)
   * [9주차 - 이터레이터와 컴포지트 패턴(rlawjddbs)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week9_summary.md)
     * [9주차 보충 - 자료구조 Tree]()
-  * [10주차 - 스테이트 패턴(ch.choi)](rdesktop 218.145.99.140:11191 -f -r sound:local)
+  * [10주차 - 스테이트 패턴(ch.choi)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week10_summary.md)
   * [11주차 - 프록시 패턴(younggeun0)]()
   * [12주차 - 컴파운드 패턴(minj0i)]()
   * [13주차 - 실전 디자인 패턴(sgmsgood)]()
