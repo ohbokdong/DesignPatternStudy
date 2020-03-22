@@ -2,24 +2,19 @@ package week10.younggeun0.state.staticway;
 
 public class GumballMachine {
 	// 이제 정적 변수를 사용하던 기존 코드를 새로 만든 클래스를 사용하는 방식으로 수정
-	static final State soldOutState = new SoldOutState();
-	static final State noQuarterState = new NoQuarterState();
-	static final State hasQuarterState = new HasQuarterState();
-	static final State soldState = new SoldState();
-	static final State winnerState = new WinnerState();
-	
-	State state = soldOutState; // 상태 초기화
+	State state = StaticState.soldOutState; // 상태 초기화
 	int count = 0;
 	
 	public GumballMachine(int numberGumballs) {
 		this.count = numberGumballs;
 		if (numberGumballs > 0) {
-			state = noQuarterState;
+			state = StaticState.noQuarterState;
 		}
 	}
 	
 	public void insertQuarter() {
 		state.insertQuarter(this);
+		
 	}
 	
 	public void ejectQuarter() {
@@ -27,8 +22,9 @@ public class GumballMachine {
 	}
 	
 	public void turnCrank() {
-		state.turnCrank(this);
-		state.dispense(this);
+		if (state.turnCrank(this)) { // #2
+			state.dispense(this);
+		};
 	}
 	
 	public void setState(State state) {
@@ -42,22 +38,6 @@ public class GumballMachine {
 		}
 	}
 	
-	public State getSoldOutState() {
-		return soldOutState;
-	}
-	public State getNoQuarterState() {
-		return noQuarterState;
-	}
-
-	public State getHasQuarterState() {
-		return hasQuarterState;
-	}
-	public State getWinnerState() {
-		return winnerState;
-	}
-	public State getSoldState() {
-		return soldState;
-	}
 	public int getCount() {
 		return count;
 	}
