@@ -32,17 +32,17 @@ for (int i = 0; i < lunchItems.length; i++){
 ```
 Waitress 는 결국 위와 같은 방식으로 항상 두 식당의 메뉴를 이용할 때 각 아이템에 대해서 반복적인 작업을 수행하기 위해 두 개의 순환문을 써야 된다. 만약 MenuItem을 또 다른 방법으로 구현하는 레스토랑 클래스가 또 추가된다면 순환문이 세 개가 필요하게 된다.  
 
-### 반복작업의 캡슐화
+### 1.반복작업의 캡슐화
 서로 다른 자료형의 집합체를 가진 객체들일지라도 동일한 인터페이스에 의존하도록 수정한다면 반복작업을 캡슐화 할 수 있다.  
   
-#### Iterator 인터페이스 정의
+#### 1-1.Iterator 인터페이스 정의
 ```java
 public interface Iterator {
     boolean hasNext();
     Object next();
 }
 ```
-#### DinerMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 DinerMenu에서 사용하도록 코드 수정
+#### 1-2.DinerMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 DinerMenu에서 사용하도록 코드 수정
 ```java
 // DinerMenuIterator.java
 public class DinerMenuIterator implements Iterator {
@@ -88,12 +88,12 @@ public class DinerMenu {
     ... // 기타 메뉴 관련 메소드 생략
 } // class
 ```
-#### PancakeHouseMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 PancakeHouseMenu에서 사용하도록 코드 수정
+#### 1-3.PancakeHouseMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 PancakeHouseMenu에서 사용하도록 코드 수정
 ```java
-
+    // TODO 코드 추가
 ```
   
-#### 웨이트리스 코드 고치기
+#### 1-4.웨이트리스 코드 고치기
 ```java
 public class Waitress {
     ...
