@@ -190,20 +190,7 @@ public class DinerMenuIterator implements Iterator {
 	int position = 0;
 	
 	... // 생성자, hasNext, next 메소드 생략 (1-2와 같음)
-	public DinerMenuIterator(MenuItem[] list) {
-		...
-	} // basic constructor
-
-	@Override
-	public boolean hasNext() {
-		...
-	} // hasNext
-
-	@Override
-	public Object next() {
-		...
-	} // next
-
+	
 	@Override
 	public void remove() {
 		if (position <= 0) {
