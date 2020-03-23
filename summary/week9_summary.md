@@ -7,7 +7,7 @@
   
 
 ![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_01.png)  
-PancakeHouseMenu와 DinerMenu는 동일한 메뉴 항목을 나타내는 MenuItem을 가지고 있으나 각각 ArrayList와 배열을 사용하기 때문에  MenuItem의 집합체를 다루는 방식이 다르다. 각기 다른 방식으로 집합체를 다루는 PancakeHouseMenu와 DinerMenu의 객체를 사용하는 Waitress 클라이언트 클래스는 두 객체가 가진 모든 MenuItem 항목을 출력하는 printMenu() 메소드가 있다.
+PancakeHouseMenu와 DinerMenu는 동일한 메뉴 항목을 나타내는 MenuItem을 가지고 있으나 각각 ArrayList와 배열을 사용하기 때문에  MenuItem의 집합체를 다루는 방식이 다르다. Waitress 클라이언트 클래스는 PancakeHouseMenu, DinerMenu 객체가 가진 모든 MenuItem 항목을 출력하는 printMenu() 메소드가 있다.
 
 ```java
 // Waitress 클래스의 printMenu() 메소드 소스
@@ -30,20 +30,63 @@ for (int i = 0; i < lunchItems.length; i++){
     System.out.println(menuItem.getDescription() + " ");
 }
 ```
-Waitress 는 결국 위와 같은 방식으로 항상 두 식당의 메뉴를 이용할 때 각 아이템에 대해서 반복적인 작업을 수행하기 위해 두 개의 순환문을 써야 된다. 만약 MenuItem을 또 다른 방법으로 구현하는 레스토랑이 또 추가된다면 순환문이 세 개가 필요하게 된다.  
+Waitress 는 결국 위와 같은 방식으로 항상 두 식당의 메뉴를 이용할 때 각 아이템에 대해서 반복적인 작업을 수행하기 위해 두 개의 순환문을 써야 된다. 만약 MenuItem을 또 다른 방법으로 구현하는 레스토랑 클래스가 또 추가된다면 순환문이 세 개가 필요하게 된다.  
 
 ### 반복작업의 캡슐화
-서로 다른 자료형의 집합체를 가진 두 객체를 동일한 인터페이스에 의존하도록 수정한다면 반복작업을 캡슐화 할 수 있다.  
-
+서로 다른 자료형의 집합체를 가진 객체들일지라도 동일한 인터페이스에 의존하도록 수정한다면 반복작업을 캡슐화 할 수 있다.  
+  
+#### Iterator 인터페이스 정의
 ```java
 public interface Iterator {
     boolean hasNext();
     Object next();
 }
 ```
-
+#### DinerMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 DinerMenu에서 사용하도록 코드 수정
 ```java
+// DinerMenu Iterator
+public class DinerMenuIterator implements Iterator {
+    MenuItem[] items;
+    int position = 0;
+    
+    public DinerMenuIterator(MenuItem[] items) {
+        this.items = items;
+    } // basic constructor
+    
+    public Object next() {
+        MenuItem menuItem = items[position];
+        position = position + 1;
+        return menuItem;
+    }
+    
+    public boolean hasNext() {
+        if (position >= items.length || items[position] == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+} // class
 
+// DinerMenu
+public class DinerMenu {
+    static final int MAX_ITEMS = 6;
+    int numberOfItems = 0;
+    MenuItem[] menuItems;
+    
+    ... // 생성자, addItem 메소드 생략
+    
+    // 제거된 getter 메소드. 내부 구조를 다 드러내는 단점이 있기 때문에 없앰.
+//  public MenuItem[] getMenuItems() {
+//      return menuItems;
+//  }
+    
+    public Iterator createIterator() {
+        return new DinerMenuIterator(menuItems);
+    }    
+    
+    ... // 기타 메뉴 관련 메소드 생략
+} // class
 ```
   
 ```java
