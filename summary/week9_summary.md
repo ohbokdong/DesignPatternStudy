@@ -186,26 +186,26 @@ ArrayList에 정의된 createIterator() 메소드 사용
 // java.util 패키지의 반복자 활용하기 
 import java.util.Iterator;
 public class DinerMenuIterator implements Iterator {
-	MenuItem[] list;
-	int position = 0;
+    MenuItem[] list;
+    int position = 0;
 	
-	... // 생성자, hasNext, next 메소드 생략 (1-2와 같음)
+    ... // 생성자, hasNext, next 메소드 생략 (1-2와 같음)
 	
-	@Override
-	public void remove() {
-		if (position <= 0) {
-			throw new IllegalStateException("next()를 한 번도 호출하지 않은 상태에서는 삭제할 수 없습니다.");
-		} 
+    @Override
+    public void remove() {
+        if (position <= 0) {
+            throw new IllegalStateException("next()를 한 번도 호출하지 않은 상태에서는 삭제할 수 없습니다.");
+        } 
 		
-		if (list[position-1] != null) {
-			for(int i = position - 1; i < (list.length-1); i++) {
-				// 배열의 현재 index에 할당 된 값을 다음 index에 할당 된 값으로 변경 (현재 index에 할당 된 값은 없어짐)
-				list[i] = list[i+1];
-			} 
-			// 배열의 마지막 index에 할당 된 값은 null 처리
-			list[list.length - 1] = null;
-		} 
-	} 
+	if (list[position-1] != null) {
+	    for(int i = position - 1; i < (list.length-1); i++) {
+                // 배열의 현재 index에 할당 된 값을 다음 index에 할당 된 값으로 변경 (현재 index에 할당 된 값은 없어짐)
+                list[i] = list[i+1];
+	    } 
+	    // 배열의 마지막 index에 할당 된 값은 null 처리
+            list[list.length - 1] = null;
+        } 
+    } 
 } // class
 ```
 기존에 작성한 DinerMenuIterator 클래스와 크게 다른점은 없지만 직접 작성한 Iterator 인터페이스에서 import 를 사용하여 java.util.Iterator 를 사용하도록 한 부분과, remove 메소드를 구현해야한다는 점이 다르다.  
