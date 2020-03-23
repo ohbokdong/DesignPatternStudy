@@ -298,7 +298,35 @@ Hashtable은 키와 값을 지원하기 때문에 ArrayList보다 조금 복잡�
 * printMenu()를 여러번 호출해야 함
 * 새로운 메뉴가 추가될 때마다 Waitress에 코드를 추가해야함. OCP에 위배됨.
 ```java
-// TODO 웨이트리스 클래스 수정 코드
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class Waitress2 {
+    ArrayList menus;
+	
+    public Waitress2(ArrayList menus) {
+	this.menus = menus;
+    } // basic constructor
+
+    public void printMenu() {
+	Iterator menuIterator = menus.iterator();
+	while(menuIterator.hasNext()) {
+	    Menu menu = (Menu)menuIterator.next();
+	    printMenu(menu.createIterator());
+	} // end while
+    } // printMenu
+	
+    // 외부 반복자 : 클라이언트(여기서는 Waitress 객체)가 next()를 제어하는 Iterator
+    private void printMenu(Iterator iterator) {
+	while(iterator.hasNext()) {
+	    MenuItem menuItem = (MenuItem)iterator.next();
+	    System.out.print(menuItem.getName() + ", ");
+	    System.out.print(menuItem.getPrice() + " -- ");
+	    System.out.println(menuItem.getDescription());
+	} // end while
+    } // printMenu
+   
+} // class
 ```
 
 ```java
