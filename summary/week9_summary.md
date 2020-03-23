@@ -93,11 +93,11 @@ public class DinerMenu {
 #### 1-3. PancakeHouseMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 PancakeHouseMenu에서 사용하도록 코드 수정
 ```java
 // PancakeHouseIterator.java
-public class PancakeHouseIterator implements Iterator {
+public class PancakeHouseMenuIterator implements Iterator {
     ArrayList items;
     int position = 0;
 	
-    public PancakeHouseIterator(ArrayList items) {
+    public PancakeHouseMenuIterator(ArrayList items) {
        this.items = items;
     } // basic constructor
 
@@ -129,7 +129,7 @@ public class PancakeHouseMenu {
 //  }
 	
     public Iterator createIterator() {
-        return new PancakeHouseIterator(menuItems);
+        return new PancakeHouseMenuIterator(menuItems);
     }
     
     ... // 기타 메뉴 관련 메소드 생략
@@ -180,7 +180,7 @@ ArrayList에 정의된 createIterator() 메소드 사용
     
     ...
 ```
-1-3 과정에서 만든 PancakeHouseIterator 구상 인터페이스 클래스는 더 이상 사용되지 않음.
+1-3 과정에서 만든 PancakeHouseMenuIterator 인터페이스의 구상 클래스는 더 이상 사용되지 않음.
 
 #### 2-2. DinerMenuIterator 코드 수정
 ```java
