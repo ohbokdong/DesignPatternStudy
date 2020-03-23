@@ -3,7 +3,7 @@
 ## 이터레이터 패턴 (Iterator Pattern) 
 * 클라이언트에게 컬렉션 안의 내부 구조를 노출하지 않으면서 원소들에 접근할 수 있는 방법을 제공하는 패턴
 * 클라이언트로 부터 각기 다른 컬렉션(집합체)을 일획화하여 다룰 수 있는 방법을 제공
-* 컬렉션의 모든 원소들에게 접근하기 위한 반복적인 작업을 컬렉션에서 분리시킬 수 있음  
+* 컬렉션의 모든 원소들에게 접근하기 위한 반복적인 작업을 *캡슐화*하여 컬렉션에서 분리시킬 수 있음  
   
 
 ![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_01.png)  
@@ -44,7 +44,7 @@ public interface Iterator {
 ```
 #### DinerMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 DinerMenu에서 사용하도록 코드 수정
 ```java
-// DinerMenu Iterator
+// DinerMenuIterator.java
 public class DinerMenuIterator implements Iterator {
     MenuItem[] items;
     int position = 0;
@@ -68,7 +68,7 @@ public class DinerMenuIterator implements Iterator {
     }
 } // class
 
-// DinerMenu
+// DinerMenu.java
 public class DinerMenu {
     static final int MAX_ITEMS = 6;
     int numberOfItems = 0;
@@ -88,7 +88,12 @@ public class DinerMenu {
     ... // 기타 메뉴 관련 메소드 생략
 } // class
 ```
+#### PancakeHouseMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 PancakeHouseMenu에서 사용하도록 코드 수정
+```java
+
+```
   
+#### 웨이트리스 코드 고치기
 ```java
 public class Waitress {
     ...
