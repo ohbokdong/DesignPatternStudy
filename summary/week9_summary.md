@@ -158,7 +158,7 @@ public class Waitress {
     ...
 }
 ```
-위와 같이 PancakeHouseMenu와 DinerMenu 클래스가 동일한 인터페이스인 Iterator를 구현하였다는 가정하에 코드를 작성한다면 클라이언트 클래스 Waitress는 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일한 방법으로 사용할 수 있게 된다.
+위와 같이 PancakeHouseMenu와 DinerMenu 클래스가 Iterator 인터페이스의 구상 클래스를 사용한다는 가정하에 코드를 작성한다면 클라이언트 클래스 Waitress는 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일한 방법으로 사용할 수 있게 된다.
   
 ### 2. Iterator 인터페이스 개선하기  
 java.util.Iterator 인터페이스를 사용하도록 코드를 수정
@@ -179,11 +179,51 @@ ArrayList에 정의된 createIterator() 메소드 사용
 ```
 1-3 과정에서 만든 PancakeHouseIterator 구상 인터페이스 클래스는 더 이상 사용되지 않음.
 
-#### 2-2. DinerMenu 코드 수정
+#### 2-2. DinerMenuIterator 코드 수정
 ```java
-  // TODO - 코드작성
-```
+// DinerMenuIterator.java
 
+// java.util 패키지의 반복자 활용하기 
+import java.util.Iterator;
+public class DinerMenuIterator implements Iterator {
+	MenuItem[] list;
+	int position = 0;
+	
+	... // 생성자, hasNext, next 메소드 생략 (1-2와 같음)
+	public DinerMenuIterator(MenuItem[] list) {
+		...
+	} // basic constructor
+
+	@Override
+	public boolean hasNext() {
+		...
+	} // hasNext
+
+	@Override
+	public Object next() {
+		...
+	} // next
+
+	@Override
+	public void remove() {
+		if (position <= 0) {
+			throw new IllegalStateException("next()를 한 번도 호출하지 않은 상태에서는 삭제할 수 없습니다.");
+		} 
+		
+		if (list[position-1] != null) {
+			for(int i = position - 1; i < (list.length-1); i++) {
+				// 배열의 현재 index에 할당 된 값을 다음 index에 할당 된 값으로 변경 (현재 index에 할당 된 값은 없어짐)
+				list[i] = list[i+1];
+			} 
+			// 배열의 마지막 index에 할당 된 값은 null 처리
+			list[list.length - 1] = null;
+		} 
+	} 
+} // class
+```
+기존에 작성한 DinerMenuIterator 클래스와 크게 다른점은 없지만 직접 작성한 Iterator 인터페이스에서 import 를 사용하여 java.util.Iterator 를 사용하도록 한 부분과, remove 메소드를 구현해야한다는 점이 다르다.  
+java.util.Iterator는 remove() 메소드가 포함되어 있기 때문에 해당 메소드의 구현을 생략할 순 없지만 메소드 실행중에   *java.lang.UnsupportedOperationException*을 던지도록 하는식으로 해당 기능을 제공하지 않는 방법을 사용할 수 있다.  
+  
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
 * 복합 객체와 개별 객체를 모두 담아둘 수 있는 구조를 제공
