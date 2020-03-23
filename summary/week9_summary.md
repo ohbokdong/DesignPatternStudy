@@ -53,12 +53,14 @@ public class DinerMenuIterator implements Iterator {
         this.items = items;
     } // basic constructor
     
+    @Override
     public Object next() {
         MenuItem menuItem = items[position];
         position = position + 1;
         return menuItem;
     }
     
+    @Override
     public boolean hasNext() {
         if (position >= items.length || items[position] == null) {
             return false;
