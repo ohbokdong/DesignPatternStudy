@@ -256,11 +256,54 @@ public class Waitress {
 // TODO week9_03.png 추가
 ```
 PancakeHouseMenu와 DinerMenu 클래스에서는 Menu 인터페이스를 구현하도록 수정. Waitress 클래스는 각 메뉴 객체를 참조할 때 구상클래스 대신 인터페이스를 이용할 수 있게 된다. 이렇게 하면 **"특정 구현이 아닌 인터페이스에 맞춰서 프로그래밍한다."** 는 디자인 원칙을 따르게 되며 Waitress 클래스와 구상 클래스간의 의존성을 줄일 수 있다.  
+
+### 3. 또 다른 방식의 컬렉션으로 MenuItem 항목을 관리하는 클래스가 생길 경우
+Hashtable의 형식으로 MenuItem의 집합체를 다루는 객체마을 카페(저녁식사 메뉴)가 새롭게 합병된다고 가정.  
+
+#### 3-1. 객체마을 카페의 메뉴 구성 클래스 다이어그램
+```java
+// TODO week9_05.png 추가
+```
+#### 3-2. CafeMenu 코드 재구성
+```java
+import java.util.Hashtable;
+import java.util.Iterator;
+public class CafeMenu implements Menu{
+    Hashtable menuItems = new Hashtable();
+	
+    public CafeMenu() {
+	addItem("베지 버거와 에어 프라이", "통밀빵, 상추, 토마토, 감자튀김이 첨가된 베지 버거", true, 3.99);
+	addItem("오늘의 스프", "샐러드가 곁들여진 오늘의 스프", true, 3.99);
+	addItem("베리또", "통 핀토콩과 살사, 구아카몰이 곁들여진 푸짐한 베리또", true, 3.99);
+    } // basic constructor
+	
+    public void addItem(String name, String description, boolean vegetarian, double price) {
+	MenuItem menuItem = new MenuItem(name, description, vegetarian, price);
+	menuItems.put(menuItem.getName(), menuItem);
+    } 
+	
+//  public Hashtable getItems() {
+//      return menuItems;
+//  } 
+
+    @Override
+    public Iterator createIterator() {
+	return menuItems.values().iterator();
+    }
+} // class
+```
+Hashtable은 키와 값을 지원하기 때문에 ArrayList보다 조금 복잡하지만 values() 메소드를 통해 값(MenuItem)에 해당하는 객체만 반환받을 수 있다.  
+#### 3-3. 웨이트리스 코드 수정
+반복을 캡슐화 했지만 웨이트리스 클래스는 두 가지 문제점이 있음
+* printMenu()를 여러번 호출해야 함
+* 새로운 메뉴가 추가될 때마다 Waitress에 코드를 추가해야함. OCP에 위배됨.
+```java
+// TODO 웨이트리스 클래스 수정 코드
+```
+
 ```java
 // TODO week9_04.png 추가
 ```
-
-
 
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
