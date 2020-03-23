@@ -170,7 +170,8 @@ ArrayList에 정의된 createIterator() 메소드 사용
     ...
     
     public Iterator createIterator() {
-        // return new PancakeHouseIterator(menuItems); // PancakeHouseMenu의 반복자 클래스는 더 이상 사용되지 않음.
+    	// PancakeHouseMenu의 반복자 클래스는 더 이상 사용되지 않음.
+        // return new PancakeHouseIterator(menuItems); 
         return menuItem.iterator();
     }
     
