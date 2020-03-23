@@ -116,6 +116,23 @@ public class Waitress {
 }
 ```
 위와 같이 PancakeHouseMenu와 DinerMenu 클래스가 동일한 인터페이스인 Iterator를 구현하였다는 가정하에 코드를 작성한다면 클라이언트 클래스 Waitress는 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일한 방법으로 사용할 수 있게 된다.
+  
+### 2. Iterator 인터페이스 개선하기  
+java.util.Iterator 인터페이스를 사용하도록 코드를 수정
+  
+#### 2-1. PancakeHouseMenu 코드 수정  
+ArrayList에 정의된 createIterator() 메소드 사용
+```java
+    // PancakeHouseMenu.java
+    ...
+    
+    public Iterator createIterator() {
+        return menuItem.iterator();
+    }
+    
+    ...
+```
+
 
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
