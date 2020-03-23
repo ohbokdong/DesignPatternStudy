@@ -122,7 +122,7 @@ public class PancakeHouseIterator implements Iterator {
 public class PancakeHouseMenu {
     ArrayList menuItems;
 	
-   ... // 생성자, addItem 메소드 생략
+    ... // 생성자, addItem 메소드 생략
 	
 //  public ArrayList getMenuItems() {
 //      return menuItems;
@@ -131,6 +131,8 @@ public class PancakeHouseMenu {
     public Iterator createIterator() {
         return new PancakeHouseIterator(menuItems);
     }
+    
+    ... // 기타 메뉴 관련 메소드 생략
 } // class
 ```
   
