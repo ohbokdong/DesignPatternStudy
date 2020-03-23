@@ -92,9 +92,10 @@ public class DinerMenu {
 ```
 #### 1-3. PancakeHouseMenu가 사용할 수 있는 구상 Iterator 클래스 정의 및 PancakeHouseMenu에서 사용하도록 코드 수정
 ```java
+// PancakeHouseIterator.java
 public class PancakeHouseIterator implements Iterator {
-	  ArrayList items;
-  	int position = 0;
+    ArrayList items;
+    int position = 0;
 	
     public PancakeHouseIterator(ArrayList items) {
        this.items = items;
@@ -107,15 +108,29 @@ public class PancakeHouseIterator implements Iterator {
         } else {
             return true;
         } // end else
-    } // hasNext
+    } 
 
     @Override
     public Object next() {
         MenuItem menuItem = (MenuItem)items.get(position);
         position = position + 1;
         return menuItem;
-    } // next
+    }
+} // class
 
+// PancakeHouseMenu.java
+public class PancakeHouseMenu {
+    ArrayList menuItems;
+	
+   ... // 생성자, addItem 메소드 생략
+	
+//  public ArrayList getMenuItems() {
+//      return menuItems;
+//  }
+	
+    public Iterator createIterator() {
+        return new PancakeHouseIterator(menuItems);
+    }
 } // class
 ```
   
