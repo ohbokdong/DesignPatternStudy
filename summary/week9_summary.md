@@ -5,7 +5,6 @@
 * 클라이언트로 부터 각기 다른 컬렉션(집합체)을 일획화하여 다룰 수 있는 방법을 제공
 * 컬렉션의 모든 원소들에게 접근하기 위한 반복적인 작업을 **캡슐화**하여 컬렉션에서 분리시킬 수 있음  
   
-
 ![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_01.png)  
 PancakeHouseMenu와 DinerMenu는 동일한 메뉴 항목을 나타내는 MenuItem을 가지고 있으나 각각 ArrayList와 배열을 사용하기 때문에  MenuItem의 집합체를 다루는 방식이 다르다. Waitress 클라이언트 클래스는 PancakeHouseMenu, DinerMenu 객체가 가진 모든 MenuItem 항목을 출력하는 printMenu() 메소드가 있다.
 
@@ -167,7 +166,7 @@ public class Waitress {
 java.util.Iterator 인터페이스를 사용하도록 코드를 수정
   
 #### 2-1. PancakeHouseMenu 코드 수정  
-ArrayList에 정의된 createIterator() 메소드 사용
+ArrayList의 createIterator() 메소드 사용(java.util.Iterator 형식의 객체를 반환해줌)
 ```java
     // PancakeHouseMenu.java
     ...
@@ -202,10 +201,11 @@ public class DinerMenuIterator implements Iterator {
 		
 	if (list[position-1] != null) {
 	    for(int i = position - 1; i < (list.length-1); i++) {
-                // 배열의 현재 index에 할당 된 값을 다음 index에 할당 된 값으로 변경 (현재 index에 할당 된 값은 없어짐)
+	    	// 배열의 값을 한칸씩 왼쪽으로 이동
+                // 배열의 현재 index에 할당된 값을 다음 index에 할당 된 값으로 변경
                 list[i] = list[i+1];
 	    } 
-	    // 배열의 마지막 index에 할당 된 값은 null 처리
+	    // 배열의 마지막 index에 할당된 값은 null 처리
             list[list.length - 1] = null;
         } 
     } 
@@ -255,7 +255,12 @@ public class Waitress {
 ```java
 // TODO week9_03.png 추가
 ```
-PancakeHouseMenu와 DinerMenu 클래스에서는 Menu 인터페이스를 구현하도록 수정. Waitress 클래스는 각 메뉴 객체를 참조할 때 구상클래스 대신 인터페이스를 이용할 수 있게 된다. 이렇게 하면 **"특정 구현이 아닌 인터페이스에 맞춰서 프로그래밍한다."** 는 디자인 원칙을 따르게 되며 Waitress 클래스와 구상 클래스간의 의존성을 줄일 수 있다. 
+PancakeHouseMenu와 DinerMenu 클래스에서는 Menu 인터페이스를 구현하도록 수정. Waitress 클래스는 각 메뉴 객체를 참조할 때 구상클래스 대신 인터페이스를 이용할 수 있게 된다. 이렇게 하면 **"특정 구현이 아닌 인터페이스에 맞춰서 프로그래밍한다."** 는 디자인 원칙을 따르게 되며 Waitress 클래스와 구상 클래스간의 의존성을 줄일 수 있다.  
+```java
+// TODO week9_04.png 추가
+```
+
+
 
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
