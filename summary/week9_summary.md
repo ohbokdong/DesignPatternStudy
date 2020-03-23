@@ -158,6 +158,9 @@ public class Waitress {
     ...
 }
 ```
+```java
+// TODO week9_02.png 추가
+```
 위와 같이 PancakeHouseMenu와 DinerMenu 클래스가 Iterator 인터페이스의 구상 클래스를 사용한다는 가정하에 코드를 작성한다면 클라이언트 클래스 Waitress는 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일한 방법으로 사용할 수 있게 된다.
   
 ### 2. Iterator 인터페이스 개선하기  
@@ -210,7 +213,50 @@ public class DinerMenuIterator implements Iterator {
 ```
 기존에 작성한 DinerMenuIterator 클래스와 크게 다른점은 없지만 직접 작성한 Iterator 인터페이스에서 import 를 사용하여 java.util.Iterator 를 사용하도록 한 부분과, remove 메소드를 구현해야한다는 점이 다르다.  
 java.util.Iterator는 remove() 메소드가 포함되어 있기 때문에 해당 메소드의 구현을 생략할 순 없지만 메소드 실행중에   **java.lang.UnsupportedOperationException**을 던지도록 하는식으로 해당 기능을 제공하지 않는 방법을 사용할 수 있다.  
-  
+
+#### 2-3. 각 식당 메뉴를 캡슐화하기 위 Menu 인터페이스 작성, 웨이트리스 코드 수정
+```java
+// Menu.java
+public interface Menu { 
+    public Iterator createIterator();
+}
+
+// Waitress.java
+import java.util.Iterator;
+public class Waitress {
+    Menu pancakeHouseMenu;
+    Menu dinerMenu;
+	
+    public Waitress(Menu pancakeHouseMenu, Menu dinerMenu) {
+	this.pancakeHouseMenu = pancakeHouseMenu;
+	this.dinerMenu = dinerMenu;
+    } // basic constructor
+	
+    public void printMenu() {
+	Iterator pancakeIterator = pancakeHouseMenu.createIterator();
+	Iterator dinerIterator = dinerMenu.createIterator();
+	System.out.println("메뉴\n----\n아침메뉴");
+	printMenu(pancakeIterator);
+	System.out.println("\n점심메뉴");
+	printMenu(dinerIterator);
+    } // printMenu
+	
+    // 외부 반복자 : 클라이언트(Waitress 객체)가 next()를 제어하는 경우
+    private void printMenu(Iterator iterator) {
+	while(iterator.hasNext()) {
+	    MenuItem menuItem = (MenuItem)iterator.next();
+	    System.out.print(menuItem.getName() + ", ");
+	    System.out.print(menuItem.getPrice() + " -- ");
+	    System.out.println(menuItem.getDescription());
+	} 
+    } 
+} // class
+```
+```java
+// TODO week9_03.png 추가
+```
+PancakeHouseMenu와 DinerMenu 클래스에서는 Menu 인터페이스를 구현하도록 수정. Waitress 클래스는 각 메뉴 객체를 참조할 때 구상클래스 대신 인터페이스를 이용할 수 있게 된다. 이렇게 하면 **"특정 구현이 아닌 인터페이스에 맞춰서 프로그래밍한다."**는 디자인 원칙을 따르게 되며 Waitress 클래스와 구상 클래스간의 의존성을 줄일 수 있다. 
+
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
 * 복합 객체와 개별 객체를 모두 담아둘 수 있는 구조를 제공
