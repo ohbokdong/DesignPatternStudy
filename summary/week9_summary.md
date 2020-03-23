@@ -3,7 +3,7 @@
 ## 이터레이터 패턴 (Iterator Pattern) 
 * 클라이언트에게 컬렉션 안의 내부 구조를 노출하지 않으면서 원소들에 접근할 수 있는 방법을 제공하는 패턴
 * 클라이언트로 부터 각기 다른 컬렉션(집합체)을 일획화하여 다룰 수 있는 방법을 제공
-* 컬렉션의 모든 원소들에게 접근하기 위한 반복적인 작업을 *캡슐화*하여 컬렉션에서 분리시킬 수 있음  
+* 컬렉션의 모든 원소들에게 접근하기 위한 반복적인 작업을 **캡슐화**하여 컬렉션에서 분리시킬 수 있음  
   
 
 ![01](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_01.png)  
@@ -209,7 +209,7 @@ public class DinerMenuIterator implements Iterator {
 } // class
 ```
 기존에 작성한 DinerMenuIterator 클래스와 크게 다른점은 없지만 직접 작성한 Iterator 인터페이스에서 import 를 사용하여 java.util.Iterator 를 사용하도록 한 부분과, remove 메소드를 구현해야한다는 점이 다르다.  
-java.util.Iterator는 remove() 메소드가 포함되어 있기 때문에 해당 메소드의 구현을 생략할 순 없지만 메소드 실행중에   *java.lang.UnsupportedOperationException*을 던지도록 하는식으로 해당 기능을 제공하지 않는 방법을 사용할 수 있다.  
+java.util.Iterator는 remove() 메소드가 포함되어 있기 때문에 해당 메소드의 구현을 생략할 순 없지만 메소드 실행중에   **java.lang.UnsupportedOperationException**을 던지도록 하는식으로 해당 기능을 제공하지 않는 방법을 사용할 수 있다.  
   
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
