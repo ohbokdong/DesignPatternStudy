@@ -292,7 +292,8 @@ public class CafeMenu implements Menu{
     }
 } // class
 ```
-Hashtable은 키와 값을 지원하기 때문에 ArrayList보다 조금 복잡하지만 values() 메소드를 통해 값(MenuItem)에 해당하는 객체만 반환받을 수 있다.  
+Hashtable은 키와 값을 지원하기 때문에 ArrayList보다 조금 복잡하지만 values() 메소드를 통해 값(MenuItem)에 해당하는 객체만 반환받을 수 있다.  또한 java.util.Iterator 형식의 객체를 반환하는 iterator() 메소드를 지원한다.
+  
 #### 3-3. 웨이트리스 코드 수정
 반복을 캡슐화 했지만 웨이트리스 클래스는 두 가지 문제점이 있음
 * printMenu()를 여러번 호출해야 함
