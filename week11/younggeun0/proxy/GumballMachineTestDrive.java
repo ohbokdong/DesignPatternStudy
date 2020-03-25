@@ -1,5 +1,7 @@
 package week11.younggeun0.proxy;
 
+import java.rmi.Naming;
+
 public class GumballMachineTestDrive {
 
 	public static void main(String[] args) {
@@ -10,12 +12,16 @@ public class GumballMachineTestDrive {
 			System.exit(1);
 		}
 		
-		count = Integer.parseInt(args[1]);
-		GumballMachine gumballMachine = new GumballMachine(count, args[0]);
-		GumballMonitor monitor = new GumballMonitor(gumballMachine);
+		try {
+			count = Integer.parseInt(args[1]);
+			GumballMachine gumballMachine = new GumballMachine(count, args[0]);
+			Naming.rebind("//"+args[0]+"/gumballmachine", gumballMachine);
+//			GumballMonitor monitor = new GumballMonitor(gumballMachine);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		// 기타 코드
-		
-		monitor.report();
+//		monitor.report();
 	}
 }

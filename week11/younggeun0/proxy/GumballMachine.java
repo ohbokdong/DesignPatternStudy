@@ -1,6 +1,9 @@
 package week11.younggeun0.proxy;
 
-public class GumballMachine {
+import java.rmi.*;
+import java.rmi.server.*;
+
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
 	
 	String location; // 기타 인스턴스 변수
 	
@@ -13,7 +16,7 @@ public class GumballMachine {
 	State state = soldOutState;
 	int count = 0;
 	
-	public GumballMachine(int numberGumballs, String location) {
+	public GumballMachine(int numberGumballs, String location) throws RemoteException {
 		// 기타 생성자 코드
 		this.location = location;
 		
