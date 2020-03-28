@@ -135,7 +135,7 @@ public class GumballMonitorTestDrive { // CEO는 이것만 실행시키면 됨
 }
 ```
 
-![week11/img4]()
+![week11/img4](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img4.png?raw=true)
 
 
 ## 기타 프록시
