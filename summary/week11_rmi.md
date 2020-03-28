@@ -10,7 +10,7 @@
 
 ## 원격 프록시
 
-![week11/img3](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img3.png?raw=true)
+![week11/img3](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img3.jpg?raw=true)
 
 * **원격 프록시는 원격 객체에 대한 로컬 대변자 역할**
 * **원격 객체(Remote Object)란** 다른 자바 가상 머신의 힙에서 살고 있는 객체
