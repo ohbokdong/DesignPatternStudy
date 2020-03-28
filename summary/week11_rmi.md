@@ -10,14 +10,14 @@
 
 ## 원격 프록시
 
-![week11/img3]()
+![week11/img3](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img3.png?raw=true)
 
 * **원격 프록시는 원격 객체에 대한 로컬 대변자 역할**
 * **원격 객체(Remote Object)란** 다른 자바 가상 머신의 힙에서 살고 있는 객체
   * 조금 더 일반적으로 얘기하자면 다른 주소 공간에서 돌아가고 있는 원격 객체
 * **로컬 대변자(Local Representative)는** 어떤 메소드를 호출하면 다른 원격 객체한테 그 메소드를 호출을 전달해주는 역할을 맡고 있는 객체
 
-![week11/img2]()
+![week11/img2](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img2.png?raw=true)
 
 * 클라이언트 입장에서 대신 통신을 처리해 주는 **보조 객체(Client Helper/ Proxy/ RMI Stub)가 필요**
 	* 클라이언트 보조 객체의 메소드를 호출하면 클라이언트 입장에서는 그 보조 객체가 실제 서비스를 제공한다고 생각하는 것

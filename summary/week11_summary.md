@@ -10,7 +10,7 @@
 	* **보호 프록시(Protection Proxy)를** 써서 접근 권한이 필요한 자원에 대한 접근을 제어
   * 등등
 
-![week11/img1]()
+![week11/img1](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img1.png?raw=true)
 
 * **Proxy와 RealSubject 모두 Subejct 인터페이스를 구현**
 	* 이렇게 하면 어떤 클라이언트에서든 프록시를 구현하기 때문에 ReaulSubject가 들어가야 할 자리에 Proxy를 대신 집어넣을 수 있음
