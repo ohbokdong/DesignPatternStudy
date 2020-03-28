@@ -24,7 +24,9 @@
 
 ## 프록시 패턴 예제 - GumballMachine 원격 프록시
 
-* [원격 프록시 이해를 위한 사전 지식 (RMI)]()
+* [원격 프록시 이해를 위한 사전 지식 (RMI)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week11_rmi.md)
+
+![week11/img3](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img3.jpg?raw=true)
 
 ```java
 import java.rmi.*;
