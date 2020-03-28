@@ -67,8 +67,9 @@ public class GumballMachine extends UnicastRemoteObject  implements GumballMachi
   ...
   public GumballMachine(int numberGumballs, String location)  throws RemoteException { 
         // 기타 생성자 코드
+```
 
-
+```java
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 public class GumballMachineTestDrive {
