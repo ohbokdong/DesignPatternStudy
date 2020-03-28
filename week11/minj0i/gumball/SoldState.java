@@ -1,4 +1,4 @@
-package week11.minj0i;
+package week11.minj0i.gumball;
 
 public class SoldState implements State {
 	GumballMachine gumballMachine;

@@ -1,4 +1,4 @@
-package week11.minj0i;
+package week11.minj0i.gumball;
 
 public class NoQuarterState implements State {
 	transient GumballMachine gumballMachine;
