@@ -57,7 +57,7 @@
 #### 널 트리
 노드, 가지가 없는 트리를 널 트리(null tree)라고 함.
 
-![07](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_07.png)
 #### 순서트리와 무순서 트리
+![07](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_07.png)
 형제 노드의 순서가 있는지 없는지에 따라 트리를 두 종류로 분류. 형제 노드의 순서를 따지면 순서 트리(ordered tree), 따지지 않으면 무순서 트리(unordered tree)라고 함. 위 이미지의 경우 순서 트리로 보면 다른 트리지만, 무순서 트리로 보면 같은 트리라고 할 수 있음.
 
