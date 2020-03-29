@@ -153,6 +153,7 @@ public class GumballMonitorTestDrive { // CEO는 이것만 실행시키면 됨
 ![week11/img5](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week11/img5.png?raw=true)
 
 * **보호 프록시**
+  * **보호 프록시는 접근 권한(access right)을 바탕으로 객체에 대한 접근을 제어하는 프록시**
   * 자바 java.lang.reflect 패키지에 프록시 기능이 내장되어 있음
     * 즉석에서 한 개 이상의 인터페이스를 구현하고 메소드 호출을 지정해 준 클래스에 전달할 수 있는 프록시 클래스를 만들 수 있음
   * 프록시 클래스는 자바가 만들어 주며 Subject 인터페이스 전체를 구현
