@@ -1,4 +1,4 @@
-package week11.minj0i;
+package week11.minj0i.gumball;
 
 import java.io.*;
 
