@@ -157,9 +157,8 @@ public class Waitress {
     ...
 }
 ```
-```java
-// TODO week9_02.png 추가
-```
+![02](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_02.png)
+  
 위와 같이 PancakeHouseMenu와 DinerMenu 클래스가 Iterator 인터페이스의 구상 클래스를 사용한다는 가정하에 코드를 작성한다면 클라이언트 클래스 Waitress는 각각의 자료형에 맞춰 순환문을 두 번 사용하지 않고도 두 식당의 메뉴 항목 집합체를 동일한 방법으로 사용할 수 있게 된다.
   
 ### 2. Iterator 인터페이스 개선하기  
@@ -252,18 +251,16 @@ public class Waitress {
     } 
 } // class
 ```
-```java
-// TODO week9_03.png 추가
-```
+![03](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_03.png)
+  
 PancakeHouseMenu와 DinerMenu 클래스에서는 Menu 인터페이스를 구현하도록 수정. Waitress 클래스는 각 메뉴 객체를 참조할 때 구상클래스 대신 인터페이스를 이용할 수 있게 된다. 이렇게 하면 **"특정 구현이 아닌 인터페이스에 맞춰서 프로그래밍한다."** 는 디자인 원칙을 따르게 되며 Waitress 클래스와 구상 클래스간의 의존성을 줄일 수 있다.  
 
 ### 3. 또 다른 방식의 컬렉션으로 MenuItem 항목을 관리하는 클래스가 추가될 경우
 Hashtable의 형식으로 MenuItem의 집합체를 다루는 CafeMenu(저녁식사 메뉴)가 새롭게 합병된다고 가정.  
 
 #### 3-1. CafeMenu의 메뉴 구성 클래스 다이어그램
-```java
-// TODO week9_05.png 추가
-```
+![05](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_05.png)
+  
 #### 3-2. CafeMenu 코드 재구성
 ```java
 import java.util.Hashtable;
@@ -329,11 +326,8 @@ public class Waitress2 {
    
 } // class
 ```
-
-```java
-// TODO week9_04.png 추가
-```
-
+![04](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week9_04.png)
+  
 ## 컴포지트 패턴 (Composite Pattern)
 * 클라이언트에게 개별 객체와 복합 객체를 동일한 방법으로 다룰 수 있는 방법을 제공하는 패턴
 * 복합 객체와 개별 객체를 모두 담아둘 수 있는 구조를 제공
