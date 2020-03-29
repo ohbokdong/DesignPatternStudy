@@ -298,16 +298,17 @@ Hashtable은 키와 값을 지원하기 때문에 ArrayList보다 조금 복잡�
 * printMenu()를 여러번 호출해야 함
 * 새로운 메뉴가 추가될 때마다 Waitress에 코드를 추가해야함. OCP에 위배됨.
 ```java
+// Waitress.java
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Waitress2 {
+public class Waitress {
     ArrayList menus;
 	
-    public Waitress2(ArrayList menus) {
+    public Waitress(ArrayList menus) {
 	this.menus = menus;
     } // basic constructor
-
+    
     public void printMenu() {
 	Iterator menuIterator = menus.iterator();
 	while(menuIterator.hasNext()) {
