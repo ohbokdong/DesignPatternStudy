@@ -10,4 +10,5 @@
 *.sqlite
 *.suo
 *.DS_Store
+*.gliffy
 summary/.DS_Store
