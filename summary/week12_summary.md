@@ -248,4 +248,8 @@ public class Quackologist implements Observer {
 5. 이터레이터 패턴 : java.util의 반복자 iterator
 6. 옵저버 패턴 : Quackologist를 Quackable의 옵저버로 등록
 
-![오리 클래스 다이어그램](https://lh3.googleusercontent.com/proxy/DVqiNUf1H_yC3WnJGYyijgwn2-CwH6QvcfVDj59VgVX6kydomNnqWQ2nkcLKEEcWCohuhGjYUR2j5CS2XzE9DTsWFZzgLZ3-andUlZbG2FbIt9-BHQ)
+![오리 클래스 다이어그램](http://wiki.gurubee.net/download/attachments/1507417/duck.jpg)
+
+
+## 모델,뷰,컨트롤러 MVC
+![모델뷰컨트롤러](https://thebook.io/img/007024/023.jpg)
