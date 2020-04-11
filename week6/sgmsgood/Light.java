@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class Light {
 	String message;
@@ -8,11 +8,11 @@ public class Light {
 	}
 	
 	public void on() {
-		System.out.println(message + " ºÒ ÄÑÁü");
+		System.out.println(message + " ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 	}
 	
 	public void off() {
-		System.out.println(message + " ºÒ ²¨Áü");
+		System.out.println(message + " ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 	}
 
 }

@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class RemoteLoader {
 	public static void main(String[] args) {

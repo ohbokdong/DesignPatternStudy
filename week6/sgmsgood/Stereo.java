@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class Stereo {
 	String space;
@@ -7,26 +7,26 @@ public class Stereo {
 		this.space = space;
 	}
 	public void on() {
-		System.out.println(space + " ¿Àµð¿À ÄÑÁü");
+		System.out.println(space + " ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 	}
 	
 	public void off() {
-		System.out.println(space + " ¿Àµð¿À ²¨Áü");
+		System.out.println(space + " ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 	}
 	
 	public void setCD() {
-		System.out.println(space + " CD ³ÖÀ½");
+		System.out.println(space + " CD ï¿½ï¿½ï¿½ï¿½");
 	}
 	
 	public void setDVD() {
-		System.out.println(space + " DVD ³ÖÀ½");
+		System.out.println(space + " DVD ï¿½ï¿½ï¿½ï¿½");
 	}
 	
 	public void setRadio() {
-		System.out.println(space + " ¶óµð¿À ÄÔ");
+		System.out.println(space + " ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
 	}
 	
 	public void setVolume(int Value) {
-		System.out.println(space + " º¼·ý Á¶Àý");
+		System.out.println(space + " ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 	}
 }

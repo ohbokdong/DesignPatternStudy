@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class CeilingFan {
 	public static final int HIGH = 3;
@@ -15,7 +15,7 @@ public class CeilingFan {
 	
 	public void high() {
 		speed = HIGH;
-		System.out.println(location + "¿¡ ¼±Ç³±â Ç³¼ÓÀº " + speed);
+		System.out.println(location + "ï¿½ï¿½ ï¿½ï¿½Ç³ï¿½ï¿½ Ç³ï¿½ï¿½ï¿½ï¿½ " + speed);
 	}
 	
 	public void medium() {
@@ -28,7 +28,7 @@ public class CeilingFan {
 	
 	public void off() {
 		speed = OFF;
-		System.out.println(location + "¿¡ ¼±Ç³±â ²¨Áü.");
+		System.out.println(location + "ï¿½ï¿½ ï¿½ï¿½Ç³ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.");
 	}
 	
 	public int getSpeed() {
