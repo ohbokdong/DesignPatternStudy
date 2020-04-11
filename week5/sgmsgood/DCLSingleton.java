@@ -1,4 +1,4 @@
-package Singleton;
+package week5.sgmsgood;
 
 public class DCLSingleton {
 	private volatile static DCLSingleton uniqueInstance;

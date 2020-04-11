@@ -1,4 +1,4 @@
-package Templete;
+package week8.sgmsgood;
 
 public class Duck implements Comparable {
 	String name;
@@ -10,17 +10,17 @@ public class Duck implements Comparable {
 	}
 	
 	public String toString() {
-		return name + ", Ã¼Áß" + weight;
+		return name + ", Ã¼ï¿½ï¿½" + weight;
 	}
 
-	//sort() ¸Þ¼Òµå¿¡¼­ ÇÊ¿ä·Î ÇÏ´Â °Í
-	//compareTo() ¸Þ¼Òµå¿¡¼­´Â ´Ù¸¥ Duck °´Ã¼¸¦ ÀÎÀÚ·Î ¹Þ¾Æ¼­ ÀÌ °´Ã¼¿Í ºñ±³ÇÕ´Ï´Ù.
+	//sort() ï¿½Þ¼Òµå¿¡ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½
+	//compareTo() ï¿½Þ¼Òµå¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ Duck ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½Þ¾Æ¼ï¿½ ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 	@Override
 	public int compareTo(Object object) {
 		Duck otherDuck = (Duck) object;
 		
-		//Duck °´Ã¼µéÀ» ºñ±³ÇÏ´Â ¹æ¹ýÀÌ µé¾îÀÖ´Â ºÎºÐ.
-		// ÀÌ ¿À¸®ÀÇ ¹«°Ô°¡ otherDuck ¿À¸®º¸´Ù °¡º­¿ì¸é -1, ¹«°Å¿ì¸é 1, °°À¸¸é 0 ¹ÝÈ¯
+		//Duck ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½Îºï¿½.
+		// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô°ï¿½ otherDuck ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -1, ï¿½ï¿½ï¿½Å¿ï¿½ï¿½ 1, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0 ï¿½ï¿½È¯
 		if(this.weight < otherDuck.weight) {
 			return -1;
 		} else if (this.weight == otherDuck.weight) {

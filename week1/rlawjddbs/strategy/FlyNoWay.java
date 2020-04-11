@@ -1,8 +1,8 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class FlyNoWay implements FlyBehavior{
 	@Override
 	public void fly() {
-		System.out.println("("+this.getClass().getSimpleName()+") Àú´Â ³¯ ¼ö ¾ø¾î¿ä");
+		System.out.println("("+this.getClass().getSimpleName()+") ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
 	} // fly
 } // class

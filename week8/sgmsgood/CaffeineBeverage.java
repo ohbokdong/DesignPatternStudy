@@ -1,4 +1,4 @@
-package Templete;
+package week8.sgmsgood;
 
 public abstract class CaffeineBeverage {
 	final void prepareRecipe() {
@@ -12,11 +12,11 @@ public abstract class CaffeineBeverage {
 	abstract void addCondiments();
 	
 	void boilWater() {
-		System.out.println("¹° ²úÀÌ´Â Áß");
+		System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½Ì´ï¿½ ï¿½ï¿½");
 	}
 	
 	void pourInCup() {
-		System.out.println("ÄÅ¿¡ µû¸£´Â Áß");
+		System.out.println("ï¿½Å¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
 	}
 }
 

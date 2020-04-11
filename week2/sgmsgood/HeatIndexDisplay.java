@@ -1,4 +1,4 @@
-package ObserverPattern;
+package week2.sgmsgood;
 
 public class HeatIndexDisplay {
 	private float computeHeatIndex(float t, float rh) {

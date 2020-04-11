@@ -1,8 +1,8 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public class Espresso extends Beverage {
 	public Espresso() {
-		description = "©║╫╨га╥╧╪р";
+		description = "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫";
 	}
 
 	@Override

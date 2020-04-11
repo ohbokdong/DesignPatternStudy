@@ -1,14 +1,14 @@
-package Templete;
+package week8.sgmsgood;
 
 public class BeverageTestDrive {
 	public static void main(String[] args) {
 		TeaWithHook teaHook = new TeaWithHook();
 		CoffeeWithHook coffeeHook = new CoffeeWithHook();
 		
-		System.out.println("\nÂ÷ ÁØºñÁß...");
+		System.out.println("\nï¿½ï¿½ ï¿½Øºï¿½ï¿½ï¿½...");
 		teaHook.prepareRecipe();
 		
-		System.out.println("\nÄ¿ÇÇ ÁØºñÁß...");
+		System.out.println("\nÄ¿ï¿½ï¿½ ï¿½Øºï¿½ï¿½ï¿½...");
 		coffeeHook.prepareRecipe();
 	}
 }

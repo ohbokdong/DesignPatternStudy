@@ -1,4 +1,4 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class StarbuzzCoffee {
 	public static void main(String[] args) {

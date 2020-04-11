@@ -1,4 +1,4 @@
-package Templete;
+package week8.sgmsgood;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,12 +8,12 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook{
 
 	@Override
 	void brew() {
-		System.out.println("ÇÊÅÍ·Î Ä¿ÇÇ¸¦ ¿ì·Á³»´Â Áß.");
+		System.out.println("ï¿½ï¿½ï¿½Í·ï¿½ Ä¿ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½.");
 	}
 
 	@Override
 	void addCondiments() {
-		System.out.println("¿ìÀ¯¿Í ¼³ÅÁÀ» Ãß°¡ÇÏ´Â Áß.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½.");
 	}
 	
 	public boolean customerWantsCondiments() {
@@ -29,14 +29,14 @@ public class CoffeeWithHook extends CaffeineBeverageWithHook{
 	private String getUserInput() {
 		String answer = null;
 		
-		System.out.println("Ä¿ÇÇ¿¡ ¿ìÀ¯¿Í ¼³ÅÁÀ» ³Ö¾îµå¸±±î¿ä? (y/n)");
+		System.out.println("Ä¿ï¿½Ç¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½å¸±ï¿½ï¿½ï¿½? (y/n)");
 		
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		
 		try {
 			answer = in.readLine();
 		} catch (IOException ioe){
-			System.err.println("IO ¿À·ù");
+			System.err.println("IO ï¿½ï¿½ï¿½ï¿½");
 		}
 		
 		if (answer == null) {

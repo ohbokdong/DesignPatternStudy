@@ -1,8 +1,8 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class Squeak implements QuackBehavior{
 	@Override
 	public void quack() {
-		System.out.println("("+this.getClass().getSimpleName()+") »à»à");
+		System.out.println("("+this.getClass().getSimpleName()+") ï¿½ï¿½ï¿½");
 	} // quack
 } // class

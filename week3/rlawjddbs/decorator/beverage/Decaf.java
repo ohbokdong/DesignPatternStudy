@@ -1,9 +1,9 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class Decaf extends Beverage {
 
 	public Decaf() {
-		description = "µðÄ«ÆäÀÎ Ä¿ÇÇ";
+		description = "ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½";
 	} // basic constructor
 
 	@Override

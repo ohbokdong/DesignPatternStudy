@@ -1,4 +1,4 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public interface QuackBehavior {
 	public void quack();

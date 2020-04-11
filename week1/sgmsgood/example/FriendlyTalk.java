@@ -1,10 +1,10 @@
-package Roboto;
+package week1.sgmsgood.example;
 
 public class FriendlyTalk implements TalkBehavior{
 
 	@Override
 	public void Talk() {
-		System.out.println("ÃÖ½Å À¯Çà¾î¿Í ÇÔ²² Ä£±¸¸ðµå·Î ÀÌ¾ß±âÇÕ´Ï´Ù. ¿ÀÁö°í Áö¸®°í ·¹¸´°í");
+		System.out.println("ï¿½Ö½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô²ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾ß±ï¿½ï¿½Õ´Ï´ï¿½. ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 	}
 
 }

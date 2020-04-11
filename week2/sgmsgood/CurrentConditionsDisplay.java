@@ -1,29 +1,29 @@
-package ObserverPattern;
+package week2.sgmsgood;
 
 
 /*
- * 1. Observer ±¸Çö: WeatherData °´Ã¼·ÎºÎÅÍ º¯°æ »óÇ×À» ¹Þ±â À§ÇØ¼­ Observer¸¦ ±¸ÇöÇÕ´Ï´Ù.
- * 2. DisplayElement ±¸Çö: API ±¸Á¶»ó ¸ðµç µð½ºÇÃ·¹ÀÌ Ç×¸ñ¿¡¼­ DisplayElement¸¦ ±¸ÇöÇÏ±â·Î Çß±â ¶§¹®¿¡ ÀÌ ÀÎÅÍÆäÀÌ½ºµµ ±¸ÇöÇÕ´Ï´Ù.*/
+ * 1. Observer ï¿½ï¿½ï¿½ï¿½: WeatherData ï¿½ï¿½Ã¼ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ±ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ Observerï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+ * 2. DisplayElement ï¿½ï¿½ï¿½ï¿½: API ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½×¸ñ¿¡¼ï¿½ DisplayElementï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ï¿½ ï¿½ß±ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.*/
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement{
 	private float temperature;
 	private float humidity;
 	private Subject weatherData;
 	
-	//»ý¼ºÀÚ¿¡ weatherData¶ó´Â ÁÖÁ¦ °´Ã¼°¡ Àü´ÞµÇ¸ç, ±× °´Ã¼¸¦ ½á¼­ µð½ºÇÃ·¹ÀÌ¸¦ ¿ÉÀú¹ö·Î µî·ÏÇÕ´Ï´Ù. 
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ weatherDataï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ÞµÇ¸ï¿½, ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½á¼­ ï¿½ï¿½ï¿½Ã·ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
 	public CurrentConditionsDisplay(Subject weatherData) {
 		this.weatherData = weatherData;
 		weatherData.registerObserver(this);
 	}
 	
-	//update()°¡ È£ÃâµÇ¸é ±â¿Â°ú ½Àµµ¸¦ ÀúÀåÇÏ°í display()¸¦ È£ÃâÇÕ´Ï´Ù.
+	//update()ï¿½ï¿½ È£ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ display()ï¿½ï¿½ È£ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 	public void update(float temperature, float humidity, float pressure) {
 		this.temperature = temperature;
 		this.humidity = humidity;
 		display();
 	}
 	
-	//°¡Àå ÃÖ±Ù¿¡ ¾òÀº ±â¿Â°ú ½Àµµ¸¦ Ãâ·ÂÇÕ´Ï´Ù.
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½Ö±Ù¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Â°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 	public void display() {
 		System.out.println("Current conditions: " + temperature + "F degrees and " + humidity + "% humidity");
 	}

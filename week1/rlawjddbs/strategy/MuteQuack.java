@@ -1,8 +1,8 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class MuteQuack implements QuackBehavior{
 	@Override
 	public void quack() {
-		System.out.println("("+this.getClass().getSimpleName()+") Àú´Â ¼Ò¸®¸¦ ¸ø ³À´Ï´Ù.");
+		System.out.println("("+this.getClass().getSimpleName()+") ï¿½ï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½.");
 	} // quack
 } // class

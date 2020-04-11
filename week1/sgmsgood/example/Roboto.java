@@ -1,4 +1,4 @@
-package Roboto;
+package week1.sgmsgood.example;
 
 public abstract class Roboto {
 	
@@ -20,7 +20,7 @@ public abstract class Roboto {
 	}
 	
 	public void charge() {
-		System.out.println("¸ðµç ·Îº¿Àº Àü±â¿¡³ÊÁö¸¦ ÇÊ¿ä·Î ÇÕ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½â¿¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.");
 	}
 	
 }

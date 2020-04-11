@@ -1,7 +1,7 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public abstract class Beverage {
-	String description = "Á¦¸ñ¾øÀ½";
+	String description = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 	
 	public String getDescription() {
 		return description;

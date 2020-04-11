@@ -1,4 +1,4 @@
-package PensionReserve;
+package week3.sgmsgood.example;
 
 public class NubePension {
  public static void main(String[] args) {

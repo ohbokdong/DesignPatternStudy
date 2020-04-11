@@ -1,8 +1,8 @@
-package PensionReserve;
+package week3.sgmsgood.example;
 
 public class WoodHouse extends Pension{
 	public WoodHouse() {
-		description = "³ª¹«·Î µÈ ÁýÀº µû¶æÇÔ°ú ¾ÈÁ¤°¨À» ÁÝ´Ï´Ù.";
+		description = "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ô°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý´Ï´ï¿½.";
 	}
 	
 	@Override

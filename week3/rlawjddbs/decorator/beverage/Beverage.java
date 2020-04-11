@@ -1,7 +1,7 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public abstract class Beverage {
-	String description = "Á¦¸ñ ¾øÀ½";
+	String description = "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
 
 	public String getDescription() {
 		return description;

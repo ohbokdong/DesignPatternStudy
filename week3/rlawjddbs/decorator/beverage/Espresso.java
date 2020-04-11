@@ -1,9 +1,9 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class Espresso extends Beverage {
 
 	public Espresso() {
-		description = "©║╫╨га╥╧╪р";
+		description = "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫";
 	} // basic constructor
 
 	@Override

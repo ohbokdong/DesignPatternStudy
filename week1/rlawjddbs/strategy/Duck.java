@@ -1,4 +1,4 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public abstract class Duck {
 	private QuackBehavior qb;
@@ -17,7 +17,7 @@ public abstract class Duck {
 	} // performFly
 
 	public void swim() {
-		System.out.println(this.getClass().getSimpleName()+" : ¸ðµç ¿À¸®´Â ¹°¿¡ ¶å´Ï´Ù.");
+		System.out.println(this.getClass().getSimpleName()+" : ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ï´ï¿½.");
 	} // swim
 
 	public void setQuackBehavior(QuackBehavior qb) {

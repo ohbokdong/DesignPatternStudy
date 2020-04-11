@@ -1,8 +1,8 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class Quack implements QuackBehavior{
 	@Override
 	public void quack() {
-		System.out.println("("+this.getClass().getSimpleName()+")  ²Ð²Ð");
+		System.out.println("("+this.getClass().getSimpleName()+")  ï¿½Ð²ï¿½");
 	} // quack
 } // class
