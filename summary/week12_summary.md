@@ -424,7 +424,7 @@ Beats per minutes = <jsp:getProperty name="beatModel" name="beatModel" property=
 BPM : <input type=text name="bpm" value="<jsp:getProperty name="beatModel" property="BPM" />">
 ...
 ```
-![model2](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week12/model2.jpg?raw=true)
+<img src="https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week12/model2.jpg?raw=true" style="transform: rotate(270deg); width:70%; display:block; margin:auto">
 
 - 스트래티지 패턴: 컨트롤러 서블릿이 뷰의 행동을 구현함, 다른 행동 원하면 다른 컨트롤러로 변경
 - 컴포지트 패턴: 결국 복합 객체 형태
