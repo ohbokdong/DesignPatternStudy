@@ -1,4 +1,4 @@
-package week10.state2;
+package week10.rlawjddbs.state2;
 
 public interface State {
 	void insertQuarter();
