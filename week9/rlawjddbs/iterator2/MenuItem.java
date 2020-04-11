@@ -1,4 +1,4 @@
-package week9.iterator2;
+package week9.rlawjddbs.iterator2;
 
 public class MenuItem {
 	String name;

@@ -1,4 +1,4 @@
-package week9.iterator1;
+package week9.rlawjddbs.iterator1;
 
 public class DinerMenu implements Menu {
 	static final int MAX_ITEMS = 6;

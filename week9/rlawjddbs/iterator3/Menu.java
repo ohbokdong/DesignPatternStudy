@@ -1,4 +1,4 @@
-package week9.iterator3;
+package week9.rlawjddbs.iterator3;
 
 import java.util.Iterator;
 
