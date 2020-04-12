@@ -1,4 +1,4 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class MiniDuckSimulator {
 
@@ -17,7 +17,7 @@ public class MiniDuckSimulator {
 		model.swim();
 		model.performFly();
 		model.performQuack();
-		System.out.println("¸ðÇü ¿À¸® ³ª´Â Çàµ¿ ¼öÁ¤");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½àµ¿ ï¿½ï¿½ï¿½ï¿½");
 		model.setFlyBehavior(new FlyRocketPowered());
 		model.performFly();
 

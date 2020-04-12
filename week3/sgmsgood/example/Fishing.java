@@ -1,4 +1,4 @@
-package PensionReserve;
+package week3.sgmsgood.example;
 
 public class Fishing extends Activity {
 	Pension pension;

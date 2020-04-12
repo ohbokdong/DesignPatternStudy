@@ -1,4 +1,4 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public class Mocha extends CondimentDecorator {
 	
@@ -10,7 +10,7 @@ public class Mocha extends CondimentDecorator {
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + "¸ðÄ«";
+		return beverage.getDescription() + "ï¿½ï¿½Ä«";
 	}
 
 	@Override

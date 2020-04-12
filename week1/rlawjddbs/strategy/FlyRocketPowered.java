@@ -1,10 +1,10 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class FlyRocketPowered implements FlyBehavior {
 
 	@Override
 	public void fly() {
-		System.out.println("("+this.getClass().getSimpleName()+") ÇÇ¿ì¿ì¿õ");
+		System.out.println("("+this.getClass().getSimpleName()+") ï¿½Ç¿ï¿½ï¿½ï¿½");
 	}
 
 }

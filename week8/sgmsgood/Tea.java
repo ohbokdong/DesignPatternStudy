@@ -1,13 +1,13 @@
-package Templete;
+package week8.sgmsgood;
 
 public class Tea extends CaffeineBeverage {
 	@Override
 	void brew() {
-		System.out.println("Â÷¸¦ ¿ì·Á³»´Â Áß");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
 	}
 
 	@Override
 	void addCondiments() {
-		System.out.println("·¹¸óÀ» Ãß°¡ÇÏ´Â Áß");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½");
 	}
 }

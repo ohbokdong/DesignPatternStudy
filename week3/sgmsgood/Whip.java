@@ -1,4 +1,4 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public class Whip extends CondimentDecorator{
 	
@@ -10,7 +10,7 @@ public class Whip extends CondimentDecorator{
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + "ÈÖÇÎ";
+		return beverage.getDescription() + "ï¿½ï¿½ï¿½ï¿½";
 	}
 
 	@Override

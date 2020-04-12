@@ -1,4 +1,4 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class Mocha extends CondimentDecorator {
 	Beverage beverage;
@@ -9,7 +9,7 @@ public class Mocha extends CondimentDecorator {
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", ¸ðÄ«";
+		return beverage.getDescription() + ", ï¿½ï¿½Ä«";
 	}
 
 	@Override

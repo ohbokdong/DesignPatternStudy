@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class CeilingFanHighCommand implements Command {
 	CeilingFan ceilingFan;

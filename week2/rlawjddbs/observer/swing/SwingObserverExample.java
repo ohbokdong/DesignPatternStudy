@@ -1,4 +1,4 @@
-package week2.observer.swing;
+package week2.rlawjddbs.observer.swing;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -17,7 +17,7 @@ public class SwingObserverExample {
 
 	public void go() {
 		frame = new JFrame();
-		JButton button = new JButton("Á¤¸» ÇØµµ µÉ±î?");
+		JButton button = new JButton("ï¿½ï¿½ï¿½ï¿½ ï¿½Øµï¿½ ï¿½É±ï¿½?");
 		button.addActionListener(new AngelListener());
 		button.addActionListener(new DevilListener());
 		frame.getContentPane().add(BorderLayout.CENTER, button);
@@ -29,7 +29,7 @@ public class SwingObserverExample {
 
 		@Override
 		public void actionPerformed(ActionEvent ae) {
-			System.out.println("¾È µÅ. ºÐ¸í ³ªÁß¿¡ ÈÄÈ¸ÇÒ °Å¾ß.");
+			System.out.println("ï¿½ï¿½ ï¿½ï¿½. ï¿½Ð¸ï¿½ ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½È¸ï¿½ï¿½ ï¿½Å¾ï¿½.");
 		}
 
 	} // AngerListener
@@ -38,7 +38,7 @@ public class SwingObserverExample {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			System.out.println("´ç¿¬ÇÏÁö. ±×³É ÀúÁú·¯ ¹ö·Á!");
+			System.out.println("ï¿½ç¿¬ï¿½ï¿½ï¿½ï¿½. ï¿½×³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!");
 		}
 	} // DevilListener
 } // class

@@ -1,9 +1,9 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public class DarkRoast extends Beverage {
 	
 	public DarkRoast() {
-		description = "´ÙÅ© ·Î½ºÆ®";
+		description = "ï¿½ï¿½Å© ï¿½Î½ï¿½Æ®";
 	}
 
 	@Override

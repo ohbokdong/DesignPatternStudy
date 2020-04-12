@@ -1,10 +1,10 @@
-package Roboto;
+package week1.sgmsgood.example;
 
 public class HighBloodPressureFood implements CookingBehavior {
 
 	@Override
 	public void cook() {
-		System.out.println("ÀúÁö¹æ, Àú¿°ºÐ À½½ÄÀ» Á¦°øÇÕ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 		
 	}
 	

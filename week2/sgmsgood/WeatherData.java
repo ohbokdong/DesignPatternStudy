@@ -1,11 +1,11 @@
-package ObserverPattern;
+package week2.sgmsgood;
 
 import java.util.ArrayList;
 
-// Subject юнемфДюл╫╨ ╠╦гЖ
+// Subject О©╫О©╫О©╫О©╫О©╫О©╫О©╫л╫О©╫ О©╫О©╫О©╫О©╫
 public class WeatherData implements Subject{
-	/* Observer ╟╢ц╪╣Ию╩ юЗюЕго╠Б ю╖гь ArrayList╦╕ цъ╟║гу╢о╢ы. 
-	 * ╠в╦╝╟М ╩Щ╪╨юз©║╪╜ ╠в ╟╢ц╪╦╕ ╩Щ╪╨гу╢о╢ы.*/
+	/* Observer О©╫О©╫ц╪О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫о╠О©╫ О©╫О©╫О©╫О©╫ ArrayListО©╫О©╫ О©╫ъ╟О©╫О©╫у╢о╢О©╫. 
+	 * О©╫в╦О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫з©О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫ц╪О©╫О©╫ О©╫О©╫О©╫О©╫О©╫у╢о╢О©╫.*/
 	private ArrayList observers;
 	
 	private float temperature;
@@ -16,12 +16,12 @@ public class WeatherData implements Subject{
 		observers = new ArrayList();
 	}
 	
-	//©июЗ╧Ж╟║ ╣Н╥ою╩ го╦И ╦Я╥о ╦г ╣з©║ цъ╟║го╠Б╦╦ го╦И ╣к╢о╢ы. 
+	//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫о╦О©╫ О©╫О©╫О©╫ О©╫О©╫ О©╫з©О©╫ О©╫ъ╟О©╫О©╫о╠Б╦╦ О©╫о╦О©╫ О©╫к╢о╢О©╫. 
 	public void registerObserver(Observer o) {
 		observers.add(o);
 	}
 	
-	//©июЗ╧Ж╟║ е╩еП╦╕ ╫ец╩го╦И ╦Я╥о©║╪╜ ╩╘╠Б╦╦ го╦И ╣к╢о╢ы.
+	//О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ е╩О©╫О©╫ О©╫О©╫ц╩О©╫о╦О©╫ О©╫О©╫о©О©╫О©╫О©╫ О©╫О©╫О©╫Б╦╦ О©╫о╦О©╫ О©╫к╢о╢О©╫.
 	public void removeObserver(Observer o) {
 		int i = observers.indexOf(o);
 		if(i >= 0) {
@@ -29,10 +29,10 @@ public class WeatherData implements Subject{
 		}
 	}
 	
-	//***аъ©Д***//
-	/* ╩Себ©║ ╢Кгь╪╜ ╦П╣Г ©июЗ╧Ж╣Игяев ╬к╥ааж╢б ╨н╨п.
-	 * ╦П╣н ObserverюнемфДюл╫╨╦╕ ╠╦гЖго╢б, 
-	 * аО, update() ╦ч╪р╣Е╟║ юж╢б ╟╢ц╪╣Июл╧г╥н ╪у╫╠╟т ╬к╥ааы ╪Ж юж╫ю╢о╢ы. */
+	//***О©╫ъ©О©╫***//
+	/* О©╫О©╫О©╫б©О©╫ О©╫О©╫О©╫ь╪О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫к╥О©╫О©╫ж╢О©╫ О©╫н╨О©╫.
+	 * О©╫О©╫О©╫ ObserverО©╫О©╫О©╫О©╫О©╫О©╫О©╫л╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫о╢О©╫, 
+	 * О©╫О©╫, update() О©╫ч╪р╣Е╟║ О©╫ж╢О©╫ О©╫О©╫ц╪О©╫О©╫О©╫л╧г╥О©╫ О©╫у╫О©╫О©╫О©╫ О©╫к╥О©╫О©╫О©╫ О©╫О©╫ О©╫ж╫О©╫О©╫о╢О©╫. */
 	public void notifyObservers(){
 		for(int i = 0; i < observers.size(); i++) {
 			Observer observer = (Observer)observers.get(i);
@@ -40,12 +40,12 @@ public class WeatherData implements Subject{
 		}
 	}
 	
-	// ╠Б╩С╫╨евюл╪гю╦╨нем ╟╩╫е╣х цЬа╓д║╦╕ ╧чю╦╦И ©июЗ╧Ж╣Игяев ╬к╦Ё╢о╢ы.
+	// О©╫О©╫О©╫О©╫О©╫О©╫л╪О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫е╣О©╫ О©╫О©╫О©╫О©╫д║О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫к╦О©╫О©╫о╢О©╫.
 	public void measurementsChanged() {
 		notifyObservers();
 	}
 	
-	// ╣П╫╨гц╥╧юл гв╦Я ев╫╨ф╝
+	// О©╫О©╫О©╫ц╥О©╫О©╫О©╫ О©╫в╦О©╫ О©╫в╫О©╫ф╝
 	public void setMeasurements(float temperature, float humidity, float pressure) {
 		this.temperature = temperature;
 		this.humidity = humidity;

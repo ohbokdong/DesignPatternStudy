@@ -1,4 +1,4 @@
-package Templete;
+package week8.sgmsgood;
 
 import java.util.Arrays;
 
@@ -13,12 +13,12 @@ public class DuckSortTestDrive {
 				new Duck("Huey", 2)
 		};
 		
-		System.out.println("Á¤·Ä Àü: ");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½: ");
 		display(ducks);
 		
 		Arrays.sort(ducks);
 	
-		System.out.println("\nÁ¤·Ä ÈÄ:");
+		System.out.println("\nï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½:");
 		display(ducks);
 	}
 	

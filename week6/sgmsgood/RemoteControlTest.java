@@ -1,9 +1,9 @@
-package Command;
+package week6.sgmsgood;
 
 public class RemoteControlTest {
 	public static void main(String[] args) {	
 		SimpleRemoteControl remote = new SimpleRemoteControl();
-		Light light = new Light("ºÒ ÄÑÁü!");
+		Light light = new Light("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!");
 		LightOnCommand lightOn = new LightOnCommand(light);
 		
 		remote.setCommand(lightOn);

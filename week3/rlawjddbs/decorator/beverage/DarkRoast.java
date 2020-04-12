@@ -1,9 +1,9 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class DarkRoast extends Beverage {
 
 	public DarkRoast() {
-		description = "´ÙÅ© ·Î½ºÆ® Ä¿ÇÇ";
+		description = "ï¿½ï¿½Å© ï¿½Î½ï¿½Æ® Ä¿ï¿½ï¿½";
 	} // basic constructor
 
 	@Override

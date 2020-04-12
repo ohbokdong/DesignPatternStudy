@@ -1,4 +1,4 @@
-package week3.decorator.io_decorator;
+package week3.rlawjddbs.decorator.io_decorator;
 
 import java.io.FilterInputStream;
 import java.io.IOException;

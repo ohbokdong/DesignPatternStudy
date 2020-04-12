@@ -1,4 +1,4 @@
-package week10.state2;
+package week10.rlawjddbs.state2;
 
 public class SoldOutState implements State {
 	GumballMachine gumballMachine;

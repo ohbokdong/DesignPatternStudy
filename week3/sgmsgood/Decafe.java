@@ -1,9 +1,9 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public class Decafe extends Beverage {
 	
 	public Decafe() {
-		description = "µðÄ«ÆäÀÎ";
+		description = "ï¿½ï¿½Ä«ï¿½ï¿½ï¿½ï¿½";
 	}
 	
 	@Override

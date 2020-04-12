@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class StereoOffCommand implements Command {
 	Stereo stereo;

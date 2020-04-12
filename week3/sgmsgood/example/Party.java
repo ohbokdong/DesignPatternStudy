@@ -1,4 +1,4 @@
-package PensionReserve;
+package week3.sgmsgood.example;
 
 public class Party extends Activity {
 	Pension pension;

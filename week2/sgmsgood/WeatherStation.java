@@ -1,4 +1,4 @@
-package ObserverPattern;
+package week2.sgmsgood;
 
 public class WeatherStation {
 	public static void main(String[] args) {

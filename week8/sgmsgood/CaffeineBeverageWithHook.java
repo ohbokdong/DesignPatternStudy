@@ -1,4 +1,4 @@
-package Templete;
+package week8.sgmsgood;
 
 public abstract class CaffeineBeverageWithHook {
 	void prepareRecipe() {
@@ -7,9 +7,9 @@ public abstract class CaffeineBeverageWithHook {
 		pourInCup();
 		
 		/*
-		 * customerWantsCondiments()¶ó´Â ±¸»ó ¸Þ¼Òµå¿¡ ÀÇÇØ ½ÇÇà¿©ºÎ°¡ °áÁ¤µÇ´Â Á¶°Ç¹® Ãß°¡.
-		 * ¼Õ´ÔÀÌ Ã·°¡¹°À» ³Ö¾î´Þ¶ó°í ÇßÀ» ¶§¸¸, customerWantsCondiments()¿¡¼­ ÂüÀÌ ¸®ÅÏµÇ¸é
-		 * addCondiments()¸¦ È£ÃâÇÕ´Ï´Ù.*/
+		 * customerWantsCondiments()ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµå¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½à¿©ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½Ç¹ï¿½ ï¿½ß°ï¿½.
+		 * ï¿½Õ´ï¿½ï¿½ï¿½ Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½Þ¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, customerWantsCondiments()ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÏµÇ¸ï¿½
+		 * addCondiments()ï¿½ï¿½ È£ï¿½ï¿½ï¿½Õ´Ï´ï¿½.*/
 		if(customerWantsCondiments()) {
 			addCondiments();
 		}
@@ -19,11 +19,11 @@ public abstract class CaffeineBeverageWithHook {
 	abstract void addCondiments();
 	
 	void boilWater() {
-		System.out.println("¹° ²ú´Â Áß");
+		System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
 	}
 	
 	void pourInCup() { 
-		System.out.println("ÄÅ¿¡ µû¸£´Â Áß");
+		System.out.println("ï¿½Å¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½");
 	}
 	
 	boolean customerWantsCondiments() {

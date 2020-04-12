@@ -1,4 +1,4 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class Whip extends CondimentDecorator {
 	Beverage beverage;
@@ -9,7 +9,7 @@ public class Whip extends CondimentDecorator {
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", ÈÖÇÎ Å©¸²";
+		return beverage.getDescription() + ", ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½";
 	}
 
 	@Override

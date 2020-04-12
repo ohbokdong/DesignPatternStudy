@@ -1,4 +1,4 @@
-package week4;
+package week4.rlawjddbs.factory;
 
 public class VeggiePizza extends Pizza2 {
 	

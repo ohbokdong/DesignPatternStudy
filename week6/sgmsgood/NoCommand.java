@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class NoCommand implements Command {
 	public void execute() {}

@@ -28,6 +28,6 @@
   * [10주차 - 스테이트 패턴(ch.choi)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week10_summary.md)
   * [11주차 - 프록시 패턴(younggeun0)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week11_summary.md)
     * [11주차 보충 - RMI](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week11_rmi.md)
-  * [12주차 - 컴파운드 패턴(minj0i)]()
+  * [12주차 - 컴파운드 패턴(minj0i)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week12_summary.md)
   * [13주차 - 실전 디자인 패턴(sgmsgood)]()
   * [14주차 - 기타 패턴(rlawjddbs)]()

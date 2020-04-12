@@ -1,4 +1,4 @@
-package week3.practice;
+package week3.sgmsgood;
 
 import java.io.FilterInputStream;
 import java.io.IOException;

@@ -1,10 +1,10 @@
-package Roboto;
+package week1.sgmsgood.example;
 
 public class PoliteTalk implements TalkBehavior {
 
 	@Override
 	public void Talk() {
-		System.out.println("¿¹ÀÇ¹Ù¸¥ ¾îÅõ·Î ÀÌ¾ß±âÇÕ´Ï´Ù. :)");
+		System.out.println("ï¿½ï¿½ï¿½Ç¹Ù¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¾ß±ï¿½ï¿½Õ´Ï´ï¿½. :)");
 		
 	}
 

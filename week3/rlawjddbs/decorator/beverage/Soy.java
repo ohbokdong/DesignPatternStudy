@@ -1,4 +1,4 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class Soy extends CondimentDecorator {
 	Beverage beverage;
@@ -9,7 +9,7 @@ public class Soy extends CondimentDecorator {
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", ╣ню╞";
+		return beverage.getDescription() + ", О©╫О©╫О©╫О©╫";
 	}
 
 	@Override

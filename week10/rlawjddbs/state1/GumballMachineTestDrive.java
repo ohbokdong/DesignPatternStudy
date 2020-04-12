@@ -1,4 +1,4 @@
-package week10.state1;
+package week10.rlawjddbs.state1;
 
 public class GumballMachineTestDrive {
 

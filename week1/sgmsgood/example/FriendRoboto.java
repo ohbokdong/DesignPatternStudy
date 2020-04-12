@@ -1,4 +1,4 @@
-package Roboto;
+package week1.sgmsgood.example;
 
 public class FriendRoboto extends Roboto {
 	
@@ -9,7 +9,7 @@ public class FriendRoboto extends Roboto {
 
 	@Override
 	public void display() {
-		System.out.println("ÀÎ»ýÀº È¥ÀÚ¶óÁö¸¸ ´ç½ÅÀÇ ¿µ¿øÇÑ Ä£±¸°¡ µÇ¾îµå¸±°Ô¿ä.");
+		System.out.println("ï¿½Î»ï¿½ï¿½ï¿½ È¥ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¾ï¿½å¸±ï¿½Ô¿ï¿½.");
 
 	}
 

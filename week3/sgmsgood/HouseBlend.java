@@ -1,9 +1,9 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public class HouseBlend extends Beverage {
 
 	public HouseBlend() {
-		description = "ÇÏ¿ì½º ºí·»µå Ä¿ÇÇ";
+		description = "ï¿½Ï¿ì½º ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½";
 	}
 	
 	@Override

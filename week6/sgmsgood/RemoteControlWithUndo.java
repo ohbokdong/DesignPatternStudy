@@ -1,12 +1,12 @@
-package Command;
+package week6.sgmsgood;
 
 public class RemoteControlWithUndo {
-	// ÀÌ ¸®¸ðÄÁ ÄÚµå¿¡¼­´Â ÀÏ°ö °³ÀÇ On, Off ¸í·ÉÀ» Ã³¸®ÇÒ ¼ö ÀÖ½À´Ï´Ù. °¢ ¸í·ÉÀº ¹è¿­¿¡ ÀúÀåµË´Ï´Ù.
+	// ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Úµå¿¡ï¿½ï¿½ï¿½ï¿½ ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ On, Off ï¿½ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ë´Ï´ï¿½.
 	Command[] onCommands;
 	Command[] offCommands;
 	Command undoCommand;
 	
-	//»ý¼ºÀÚ¿¡¼­´Â °¢ On, Off ¹è¿­ÀÇ ÀÎ½ºÅÏ½º¸¦ ¸¸µé°í ÃÊ±âÈ­ÇÏ±â¸¸ ÇÏ¸é µË´Ï´Ù. 
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ On, Off ï¿½è¿­ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê±ï¿½È­ï¿½Ï±â¸¸ ï¿½Ï¸ï¿½ ï¿½Ë´Ï´ï¿½. 
 	public RemoteControlWithUndo() {
 		onCommands = new Command[7];
 		offCommands = new Command[7];
@@ -20,14 +20,14 @@ public class RemoteControlWithUndo {
 		undoCommand = noCommand;
 	}
 	
-	//Command ¼³Á¤
-	//°¢ Ä¿¸Çµå °´Ã¼¸¦ ³ªÁß¿¡ »ç¿ëÇÒ ¼ö ÀÖµµ·Ï ¹è¿­¿¡ ÀúÀåÇÕ´Ï´Ù.
+	//Command ï¿½ï¿½ï¿½ï¿½
+	//ï¿½ï¿½ Ä¿ï¿½Çµï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ß¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Öµï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 	public void setCommand(int slot, Command onCommand, Command offCommand) {
 		onCommands[slot] = onCommand;
 		offCommands [slot] = offCommand;
 	}
 	
-	// »ç¿ëÀÚ°¡ On, Off ¹öÆ°À» ´©¸£¸é ¸®¸ðÄÁ ÇÏµå¿þ¾î¿¡¼­ °¢ ¹öÆ°¿¡ ´ëÀÀµÇ´Â onButtonWasPushed() ¶Ç´Â offButtonWasPushed() ¸Þ¼Òµå¸¦ È£ÃâÇÕ´Ï´Ù. 
+	// ï¿½ï¿½ï¿½ï¿½Ú°ï¿½ On, Off ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ïµï¿½ï¿½ï¿½î¿¡ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ onButtonWasPushed() ï¿½Ç´ï¿½ offButtonWasPushed() ï¿½Þ¼Òµå¸¦ È£ï¿½ï¿½ï¿½Õ´Ï´ï¿½. 
 	public void onButtonWasPushed (int slot) {
 		onCommands[slot].execute();
 		undoCommand = onCommands[slot];

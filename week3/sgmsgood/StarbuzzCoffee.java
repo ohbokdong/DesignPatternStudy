@@ -1,4 +1,4 @@
-package week3.practice;
+package week3.sgmsgood;
 
 public class StarbuzzCoffee {
 

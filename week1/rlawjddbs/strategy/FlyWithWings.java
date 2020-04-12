@@ -1,8 +1,8 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class FlyWithWings implements FlyBehavior{
 	@Override
 	public void fly() {
-		System.out.println("("+this.getClass().getSimpleName()+") ÆÄ´ßÆÄ´ß");
+		System.out.println("("+this.getClass().getSimpleName()+") ï¿½Ä´ï¿½ï¿½Ä´ï¿½");
 	} // fly
 } // class

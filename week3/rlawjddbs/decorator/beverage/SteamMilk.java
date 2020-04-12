@@ -1,4 +1,4 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class SteamMilk extends CondimentDecorator {
 	Beverage beverage;
@@ -9,7 +9,7 @@ public class SteamMilk extends CondimentDecorator {
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", ½ºÆÀ ¹ÐÅ©";
+		return beverage.getDescription() + ", ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å©";
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package PensionReserve;
+package week3.sgmsgood.example;
 
 public abstract class Pension {
 	String description;

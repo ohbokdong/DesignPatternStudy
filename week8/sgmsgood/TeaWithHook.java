@@ -1,4 +1,4 @@
-package Templete;
+package week8.sgmsgood;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,12 +8,12 @@ public class TeaWithHook extends CaffeineBeverageWithHook{
 
 	@Override
 	void brew() {
-		System.out.println("Â÷¸¦ ¿ì·Á³»´Â Áß.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½.");
 	}
 
 	@Override
 	void addCondiments() {
-		System.out.println("·¹¸óÀ» Ãß°¡ÇÏ´Â Áß");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½");
 	}
 
 	public boolean customerWantsCondiments() {
@@ -29,14 +29,14 @@ public class TeaWithHook extends CaffeineBeverageWithHook{
 	private String getUserInput() {
 		String answer = null;
 		
-		System.out.println("Â÷¿¡ ·¹¸óÀ» ³Ö¾îµå¸±±î¿ä? (y/n)");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½å¸±ï¿½ï¿½ï¿½? (y/n)");
 		
 		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 		
 		try {
 			answer = in.readLine();
 		} catch (IOException ioe){
-			System.err.println("IO ¿À·ù");
+			System.err.println("IO ï¿½ï¿½ï¿½ï¿½");
 		}
 		
 		if (answer == null) {

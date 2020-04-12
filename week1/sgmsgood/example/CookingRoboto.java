@@ -1,4 +1,4 @@
-package Roboto;
+package week1.sgmsgood.example;
 
 public class CookingRoboto extends Roboto {
 	
@@ -9,7 +9,7 @@ public class CookingRoboto extends Roboto {
 
 	@Override
 	public void display() {
-		System.out.println("¼³Á¤ÇÏ½Å À½½ÄÀ» ·Îº¿ÀÇ ¼Õ¸ÀÀ¸·Î Á¦°øÇØµå¸³´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Øµå¸³ï¿½Ï´ï¿½.");
 	}
 
 }

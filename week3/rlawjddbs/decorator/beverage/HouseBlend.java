@@ -1,9 +1,9 @@
-package week3.decorator.beverage;
+package week3.rlawjddbs.decorator.beverage;
 
 public class HouseBlend extends Beverage {
 
 	public HouseBlend() {
-		description = "ÇÏ¿ì½º ºí·»µå Ä¿ÇÇ";
+		description = "ï¿½Ï¿ì½º ï¿½ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½";
 	} // basic constructor
 
 	@Override

@@ -1,4 +1,4 @@
-package week1.strategy;
+package week1.rlawjddbs.strategy;
 
 public class MallardDuck extends Duck {
 
@@ -9,7 +9,7 @@ public class MallardDuck extends Duck {
 
 	@Override
 	public void display() {
-		System.out.println("Àú´Â ¹° ¿À¸® ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.");
 	} // display
 
 } // class

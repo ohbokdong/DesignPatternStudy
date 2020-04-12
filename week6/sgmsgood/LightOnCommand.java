@@ -1,4 +1,4 @@
-package Command;
+package week6.sgmsgood;
 
 public class LightOnCommand implements Command {
 	
