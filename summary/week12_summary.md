@@ -324,7 +324,7 @@ public class DJTestDrive {
 ## 모델2
 - 서블릿과 JSP 기술을 사용하여 일반적인 GUI를 사용하는 경우와 마찬가지로 모델, 뷰, 컨트롤러를 분리해서 디자인
 
-![모델2](https://lh3.googleusercontent.com/proxy/ljNZYSBzvnyWUNdqWsfJaptCYhkHUXsMKGyr_prXxboEHWyE4xU7q17B4zarIZMP71tSTXTZovSLdpGbZnAJ2Y03161MMc_Luyi96hdqR3iwIeUDoOnYvg)
+![모델2](http://wiki.gurubee.net/download/attachments/1507417/MVC_Web.JPG)
 
 1. 사용자가 HTTP요청을 하면 서블릿에서 요청 수신
     - ID, 비밀번호와 같은 폼 데이터가 함께 전달
