@@ -15,7 +15,7 @@ public class GumballMachineTestDrive {
 		try {
 			count = Integer.parseInt(args[1]);
 			gumballMachine = new GumballMachine(args[0], count);
-			Naming.rebind("rmi://172.30.1.12:8080/"+args[0]+"/gumballMachine", gumballMachine);
+			Naming.rebind("rmi://172.30.1.9:8080/"+args[0]+"/gumballMachine", gumballMachine);
 		} catch (Exception e) {
 			e.getMessage();
 			e.printStackTrace();
