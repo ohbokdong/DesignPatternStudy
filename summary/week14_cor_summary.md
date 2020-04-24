@@ -20,9 +20,9 @@
   * 이메일이 수신되면 첫 번째 핸들러인 SpamHandler에 전달됨, SpamHandler에서 처리할 수 없으면 FanHandler로 넘어감
     * 이와 비슷한 식으로 사슬을 따라서 요청이 전달되면서 어딘가 적절한 핸들러에 의해 처리됨
 
-![cor-img1]()
+![cor-img1](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/cor/cor-img1.png?raw=true)
 
-![cor-img2]()
+![cor-img2](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/cor/cor-img2.png?raw=true)
 
 
 * **장점**
@@ -103,4 +103,4 @@ public class CORDrive { // Chain Of Responsibility(역할 사슬)  패턴 예제
 }
 ```
 
-![cor-img3]()
+![cor-img3](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/cor/cor-img3.png?raw=true)
