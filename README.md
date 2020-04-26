@@ -31,7 +31,8 @@
   * [12주차 - 컴파운드 패턴(minj0i)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week12_summary.md)
   * [13주차 - 실전 디자인 패턴(sgmsgood)]()
   * 14주차 - 기타 패턴
-    * [브리지, 빌더 패턴(ch.choi)]()
+    * [브리지 패턴(ch.choi)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/week14/ch.choe/Bridge.md)
+    * [빌더 패턴(ch.choi)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/week14/ch.choe/Builder.md)
     * [역할 사슬 패턴(younggeun0)](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/week14_cor_summary.md)
     * [플라이웨이트, 메멘토 패턴(rlawjddbs)]()
     * [인터프리터, 미디에이터 패턴(sgmsgood)]()
