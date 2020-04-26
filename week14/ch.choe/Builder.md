@@ -22,7 +22,7 @@
 ## 활용법 
 - 복합 객체  구조를 구축하기위한 용도로 많이 쓰임
 
-<pre><code>
+```java
 // 빌더 사용 전
 public class UserInfoBuilder 
 { 
@@ -94,9 +94,9 @@ System.out.println(userInfo3.getUserInfo());
 // 결과 => name: 테스터3, age: 26, addr: 주소
 
 출처: https://lemontia.tistory.com/483 [side impact]
-</code></pre>
+```
 
-<pre><code>
+```java
 class Pizza
 {
     string dough;
@@ -167,7 +167,7 @@ class BuilderExample
         Pizza pizza = waiter.GetPizza();
     }
 }
-</code></pre>
+```
 
 [빌더 패턴 - 위키](https://ko.wikipedia.org/wiki/%EB%B9%8C%EB%8D%94_%ED%8C%A8%ED%84%B4)
 
