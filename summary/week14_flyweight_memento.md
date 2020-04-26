@@ -8,23 +8,15 @@
   
 ```java
 public class A {
-
    public String getStringA() {
-
       return "Hello";
-
    }
-
 }
 
 public class B {
-
    public String getStringB() {
-
       return "Hello";
-
    }
-
 }
 ```
 위 두 클래스의 getStringA() 와 getStringB()는 모두 같은 위치에 있는 "Hello" String을 리턴한다. 
