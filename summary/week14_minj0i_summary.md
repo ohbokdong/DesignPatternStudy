@@ -139,7 +139,7 @@ public class Main {
 - 복제이유: 원본객체를 안전하게 보호하기 위해서
 - cloneable 인터페이스를 구현하지 않으면 clone()메소드를 호출할 때 CloneNotSupportedException 예외가 발생
 - try-catch 구문 필요
-- 얕은복제(this clone)와 깊은복제(deep clone)가 있음
+- 얕은복제(shallow copy)와 깊은복제(deep copy)가 있음
 
 ### 얕은 복제
 복제된 필드값을 변경하면 기본형의 원본 필드값은 그대로지만  참조형의 필드는 번지만 복제되기 때문에 원본과 같은 객체를 참조하게 됨
