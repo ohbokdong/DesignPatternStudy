@@ -29,7 +29,7 @@ public class UserInfoBuilder
     private String name; 
     private int age;
     private String addr; 
-    ublic UserInfoBuilder 
+    public UserInfoBuilder 
     setName(String name)
     { 
         this.name = name;

@@ -28,7 +28,7 @@ JAVA에서는 <b>clone()</b>를 사용한다.
 - Client
     - 인스턴스 복사 메소드를 사용해서 새로운 인스턴스를 만듬
 
-![prototype](https://lh3.googleusercontent.com/proxy/9h5V5jh9imOKtNNX_6SeW4koW88LG91yh742kvVHk6wb_ONy9QIafmPp7klVwS5qug4g2pxjy59luRGh0xXQleu-fHwIVFXzUeipSo5pAzE)
+![prototype](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile21.uf.tistory.com%2Fimage%2F244B8748582AA5DD11BD8D)
 
 ## 프로토타입 패턴 예제
 ![shape](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/minj0i/shape.png?raw=true)
