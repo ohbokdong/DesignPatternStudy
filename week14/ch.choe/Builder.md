@@ -171,13 +171,13 @@ class BuilderExample
 
 [빌더 패턴 - 위키](https://ko.wikipedia.org/wiki/%EB%B9%8C%EB%8D%94_%ED%8C%A8%ED%84%B4)
 
-<pre><code>
+```java
  StringBuilder builder = new StringBuilder();
             builder.Append("Test");
             builder.Append("Test1");
             builder.Append("Test2");
 
             builder.ToString();
-</code></pre>
+```
 
 스트링 빌더도 비슷해 보여서 참고 해봅니다.
