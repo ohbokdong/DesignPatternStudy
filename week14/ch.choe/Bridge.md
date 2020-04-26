@@ -19,7 +19,7 @@
 
 ![shape](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/img.JPG?raw=true)
 
-<pre><code>
+```java
  /** "Implementor" */
  interface IDrawingAPI {
     void DrawCircle(double x, double y, double radius);
@@ -76,4 +76,4 @@
         }
     }
  }
-</code></pre>
+```
