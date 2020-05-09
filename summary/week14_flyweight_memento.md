@@ -131,9 +131,7 @@ public class Client {
     }
 }
 ```
-```
-결과 콘솔 이미지
-```
+![test result](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/flyweight_result.png)
 
 ### 플라이웨이트 패턴 정리
 #### 장점
@@ -259,7 +257,7 @@ public class GameDemo {
 }
 ```
 #### 테스트 결과
-![test result](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/result.png)
+![test result](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/memento_result.png)
 
 
 ### 메멘토 패턴 정리
