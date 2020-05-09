@@ -12,7 +12,7 @@
 
 ### 패턴 적용없이 구현
 #### Tree 클래스 다이어그램
-![scenario](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree1.png)
+![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree1.png)
 
 #### Tree 클래스와 클라이언트 코드
 ```java
