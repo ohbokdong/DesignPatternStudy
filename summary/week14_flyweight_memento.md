@@ -160,18 +160,17 @@ public class Client {
   
 메맨토 패턴은 객체의 상태 정보를 가지는 클래스를 따로 생성하여, 객체의 상태를 저장하거나 이전 상태로 복원할 수 있게 해주는 패턴이다. 메멘토 패턴은 바둑, 오목, 체스 등의 보드게임 등에서 '무르기' 기능을 구현할 때 사용되기도 한다.
   
-### 시나리오
-- 개발중인 롤플레잉 게임에서 캐릭터가 레벨업하면 현재 상태를 저장하는 기능이 필요함. 
-- 캐릭터가 죽으면 마지막으로 저장된 곳에서 다시 시작할 수 있어야 함.
-  
 단일 역할 원칙(single responsibility principle)을 떠올려 본다면, 저장하고자 하는 상태를 핵심 객체로부터 분리시키는 것이 좋음.
 상태를 따로 저장하는 역할을 맡는 객체를 **메멘토 객체**라고 부름.
   
 ### 메멘토 패턴 적용
-#### 롤플레잉 게임 클래스 다이어그램
+#### 클래스 다이어그램
 ![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/memento.png)
   
+Memento 패턴은 3 개의 액터 클래스를 사용한다. Memento 클래스에는 복원 할 객체의 상태가 포함됩니다. Originator는 Memento 객체와 Memento 객체 상태를 복원하는 Caretaker 객체에 상태를 만들고 저장합니다.
+  
 ####  코드
+
 
 ### 메멘토 패턴 정리
 #### 장점  
