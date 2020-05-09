@@ -79,16 +79,16 @@ public class PineTree implements Tree {
     @Override
     public void display(int age, int x, int y) {
         System.out.println("[소나무 수령 : " + age + "년 / x좌표 : " + x + "/ y좌표 : " + y + "]");
-    } // display
-} // class
+    } 
+}
 
 // 바오밥나무
 public class BaobabTree implements Tree {
     @Override
     public void display(int age, int x, int y) {
         System.out.println("[바오밥나무 수령 : " + age + "년 / x좌표 : " + x + "/ y좌표 : " + y + "]");
-    } // display
-} // class
+    } 
+} 
 ```
 ####  나무를 생성할 팩토리 메소드
 ```java
@@ -109,6 +109,31 @@ public class TreeFactory {
     }
 }
 ```
+#### 클라이언트
+```java
+public class Client {
+    public static void main(String[] args) {
+        int[][] pineTrees = {{5, 2, 2}, {12, 6, 3}, {7, 8, 6}, {5, 2, 8}};
+        int[][] baobabTrees = {{30, 7, 5}, {15, 1, 6}, {8, 9, 8}};
+        TreeFactory treeFactory = new TreeFactory(); // creates the two flyweights
+        Tree d, c;
+        try {
+            d = treeFactory.getTree("pine");
+            c = treeFactory.getTree("baobab");
+            for (int[] pineTree : pineTrees) {
+                d.display(pineTree[0], pineTree[1], pineTree[2]);
+            }
+            for (int[] baobabTree : baobabTrees) {
+                c.display(baobabTree[0], baobabTree[1], baobabTree[2]);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+
 
 ### 플라이웨이트 패턴 정리
 #### 장점
@@ -123,6 +148,10 @@ public class TreeFactory {
 - 응용프로그램이 많은 수의 객체를 사용하는 경우
 - 물체의 수량으로 인해 저장비용이 높은 경우
 - 응용프로그램이 객체 ID에 의존하지 않는 경우
+
+#### 이거 팩토리 패턴 아닌가요?
+- 팩토리 패턴은 객체 생성을 캡슐화하는 것
+- 플라이웨이트 패턴은 팩토리 메소드를 사용했지만 비슷한 객체를 반복 생성하지 않고 단일한 객체를 반환해줌으로서 메모리 낭비를 최소화 하는 패턴
 -------------------------------
 
 ## Memento(메멘토 패턴)
