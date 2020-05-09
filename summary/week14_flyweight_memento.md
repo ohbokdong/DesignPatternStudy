@@ -1,34 +1,75 @@
 # Week 14
 
 ## Fly Weight Pattern(플라이웨이트 패턴)
+- 어떤 클래스의 인스턴스 한 개만 가지고 여러개의 "가상 인스턴스"를 제공하고 싶을 때 사용하는 패턴
 
-- 동일한 것을 공유하여 사용하는 구조
-- 동일한 것을 공유하여 메모리 사용량을 줄임
-- 가능한 많은 데이터를 서로 공유하여 사용하도록 하여 메모리 사용량을 최소화하는 디자인 패턴
+### 시나리오
+- 조경 설계 어플리케이션에서 나무를 객체 형태로 추가해야 함.
+- 나무 객체는 X, Y 좌표를 가지고 있고, 나무의 좌표, 수령에 따라 알맞은 위치와 적당한 크기로 화면에 표시 됨
 
- 플라이웨이트 패턴은, 객체의 내부에서 참조하는 객체를 직접 만드는 것이 아니라, 없다면 만들고, 만들어져 있다면 객체를 공유하는 식으로 객체를 구성하는 방법이다. 이렇게 하기 위해 대부분 팩토리 메소드 패턴을 사용해 객체를 생성한다. 팩토리 메소드 안에서는 객체(Flyweight 객체)를 새로 생성한다. 이때 생성하는 객체가 내부적으로 참조하는 객체에 대해, 기존에 있는 객체를 참조만 하는 식으로 객체를 구성한다.  이렇게 하면 객체의 할당에 사용되는 메모리를 줄일 수 있을 뿐 아니라, 객체를 생성하는 시간도 들지 않게 된다.  플라이웨이트 패턴이 가장 많이 사용되는 사례는 바로 게임이다. 게임에는 많은 UI Widget 혹은 component들이 존재하는데, 대부분 일정한 패턴의 UI가 연속되는 경우가 많다. 이런 경우 플라이웨이트 패턴을 사용해 하나의 리소스를 여러 객체에서 공유해 사용하는 방식으로 프로그래밍이 작성된다.  
-  
-가장 대표적인 flyweight pattern중의 하나는 바로 자바의 String pool이다. 컴파일 타이밍에 스트링 객체로 선언되어있는 것들은 jvm heap 메모리의  permermant 영역으로 들어가게 된다. 만약 같은 내용의 String 객체가 선언되어있다고 하더라도 새로 permernant 영역에 String 객체에 써지는 것이 아니라 기존의 String객체를 참조하는 식으로 된다.   
-  
+[scenario](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree_scenario.png?raw=true)
+대강 모양을 보면 위 이미지와 같음  
+
+### 패턴 적용없이 구현
+#### Tree 클래스 다이어그램
+[scenario](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree1.png?raw=true)
+
+#### Tree 클래스와 클라이언트 코드
 ```java
-public class A {
-   public String getStringA() {
-      return "Hello";
-   }
+// Tree
+public class Tree {
+    private String treeName;
+    private int age, xCoord, yCoord;
+    
+    private Tree() {
+    }
+    
+    public Tree(String treeName, int age, int xCoord, int yCoord) {
+        this.treeName = treeName;
+        this.age = age;
+        this.xCoord = xCoord;
+        this.yCoord = yCoord;
+    }
+
+    public void display() {
+        System.out.println("[" + treeName + " - 수령:" 
+        + age + "년 / x:" + xCoord + " / y:" + yCoord + "]");
+    }
 }
 
-public class B {
-   public String getStringB() {
-      return "Hello";
-   }
+// Client
+public class Client {
+    public static void main(String[] args) {
+        Tree pineTree1 = new Tree("소나무", 5, 2, 2);
+        Tree pineTree2 = new Tree("소나무", 12, 6, 3);
+        Tree pineTree3 = new Tree("소나무", 7, 8, 6);
+        Tree pineTree4 = new Tree("소나무", 5, 2, 8);
+        Tree baobabTree1 = new Tree("바오밥나무", 30, 7, 5);
+        Tree baobabTree2 = new Tree("바오밥나무", 15, 1, 6);
+        Tree baobabTree3 = new Tree("바오밥나무", 8, 9, 8);
+        
+        pineTree1.display();
+        pineTree2.display();
+        pineTree3.display();
+        pineTree4.display();
+        baobabTree1.display();
+        baobabTree2.display();
+        baobabTree3.display();
+    }
 }
 ```
-위 두 클래스의 getStringA() 와 getStringB()는 모두 같은 위치에 있는 "Hello" String을 리턴한다. 
+복잡하지 않지만 본 애플리케이션의 문제는 나무를 많이 만들수록 눈에 띄게 느려짐
+
+### 플라이웨이트 패턴으로 구현
+
+
+### 왜 플라이웨이트 패턴을 사용해야 하나?
+- 위와 같이 동일하거나 비슷한 객체를 많이 사용해야 할 때 매번 새로운 객체를 생성하는 대신 하나의 객체를 공유하여 효율적으로 자원을 활용할 수 있음
 
 #### 장점
 - 객체의 수를 줄인다.
-- 객체가 지속되는 경우에 필요한 메모리 및 저장장치의 양을 줄인다.
-  
+- 객체가 지속되는 경우에 필요한 메모리 및 저장 장치의 양을 줄인다.
+
 #### 단점
 - 플라이 웨이트 패턴은 객체들을 공유하므로, 만약 객체들간 동일성 여부 테스트가 프로그램 내에서 사용될 경우에는 개념적으로 서로 다른 객체라 하더라도 동일한 것으로 판단할 수 있기 때문에 문제의 소지가 된다.  따라서 플라이 웨이트 패턴을 사용하는 프로그램은 객체들간 동일성 여부 테스트를 사용하지 않아야 한다. 
 
