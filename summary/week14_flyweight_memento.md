@@ -167,9 +167,99 @@ public class Client {
 #### 클래스 다이어그램
 ![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/memento.png)
   
-Memento 패턴은 3 개의 액터 클래스를 사용한다. Memento 클래스에는 복원 할 객체의 상태가 포함됩니다. Originator는 Memento 객체와 Memento 객체 상태를 복원하는 Caretaker 객체에 상태를 만들고 저장합니다.
+메멘토 패턴은 3개의 액터 클래스를 사용한다.  
+1. Originator : 실제 상태를 가진 객체. Caretaker(클라이언트)의 요청(save)에 따라 자신의 상태를 저장한 Memento 객체를 생성한 후 Caretaker에게 반환한다. 또한 Caretaker에게 자신의 상태를 복원 요청(restore)하여 Caretaker가 저장해둔 Memento 객체를 받기도 한다. MasterGameObject 클래스에 해당.
+2. Caretaker : Originator의 내부 상태를 저장(save)하고 복구(load)하기 위해 Originator의 상태를 저장한 Memento를 관리하는 클라이언트 클래스.
+3. Memento : Originator의 상태를 저장하는 객체. Caretaker가 변경할 수 없거나 변경해서는 안 되기 때문에 불투명 자료형이라고도 한다. 위 그림에서 GameMemento 클래스에 해당.
   
-####  코드
+#### Memento 클래스
+```java
+public class GameMemento {
+    private String savedGameState;
+    
+    public GameMemento(String savedGameState) {
+        this.savedGameState = savedGameState;
+    }
+    
+    public String getSavedGameState() {
+        return savedGameState;
+    }
+}
+```
+#### Originator 클래스
+```java
+public class MasterGameObject {
+    private String gameState;
+
+    public String getCurrentState() {
+        return gameState;
+    }
+
+    public void setState(String gameState) {
+        this.gameState = gameState;
+    }
+    
+    public GameMemento saveToMemento() {
+        return new GameMemento(gameState);
+    }
+    
+    public void restoreByMemento(GameMemento gameMemento) {
+        gameState = gameMemento.getSavedGameState();
+    }
+}
+```
+#### Caretaker 클래스
+```java
+public class Caretaker {
+    private List<GameMemento> savedStates;
+    
+    public Caretaker() {
+        savedStates = new ArrayList<GameMemento>();
+    }
+    
+    public void save(GameMemento gameMemento) {
+        savedStates.add(gameMemento);
+    }
+    
+    public GameMemento load(int index) {
+        return savedStates.get(index);
+    }
+    
+    public int getLastSavedIndex() {
+        return savedStates.size() - 1;
+    }
+}
+```
+#### 테스트
+```java
+public class GameDemo {
+    public static void main(String[] args) {
+        MasterGameObject mgo = new MasterGameObject();
+        Caretaker careTaker = new Caretaker();
+        
+        // 레벨업 하면서 가끔씩 중간 세이브를 하는 상태
+        mgo.setState("레벨업 - 레벨 7");
+        mgo.setState("레벨업 - 레벨 8");
+        careTaker.save(mgo.saveToMemento());
+        
+        mgo.setState("레벨업 - 레벨 9");
+        careTaker.save(mgo.saveToMemento());
+        
+        mgo.setState("레벨업 - 레벨 10");
+        System.out.println("현재 게임 상태... " + mgo.getCurrentState());
+        
+        // 죽음
+        mgo.setState("죽음 - 레벨 0");
+        System.out.println("현재 게임 상태... " + mgo.getCurrentState());
+        
+        // 가장 마지막에 저장된 시점으로 복구
+        mgo.restoreByMemento(careTaker.load(careTaker.getLastSavedIndex()));
+        System.out.println("현재 게임 상태... " + mgo.getCurrentState());
+    }
+}
+```
+#### 테스트 결과
+![test result](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/result.png)
 
 
 ### 메멘토 패턴 정리
