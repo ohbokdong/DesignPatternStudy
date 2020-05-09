@@ -8,9 +8,10 @@
 - 나무 객체는 X, Y 좌표를 가지고 있고, 나무의 좌표, 수령에 따라 알맞은 위치와 적당한 크기로 화면에 표시 됨
 
 
-<a style="width:450px; display:block" href="https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree_scenario.png" target="_blank">
-    <img style="width:100%" src="https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree_scenario.png" />
+<a style="width:450px !important; display:block !important" href="https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree_scenario.png" target="_blank">
+    <img style="width:100% !important" src="https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree_scenario.png" />
 </a>
+
 ![scenario](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree_scenario.png)  
 대강 모양을 보면 위 이미지와 같음  
 
