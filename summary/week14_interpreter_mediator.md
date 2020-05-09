@@ -20,7 +20,7 @@
     (그런 경우 파서/컴파일러 생성기를 쓰는 것이 나음) 
 
 3. 구현 방법 </br>
-![interpreter]()
+![interpreter](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/sgmsgood/interpreter.jpg)
 
 Expression.java
 ```java
@@ -129,10 +129,15 @@ public class InterpreterPatternDemo {
 
 3. 미디에이터 추가 전</br>
 : 모든 객체들이 다른 객체들과 알고 있어야 함
+![before_mediator](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/sgmsgood/BeforeMediator.jpg)
 
 4. 미디에티어 추가 후</br>
 : 미디에이터에는 모든 시스템을 제어할 수 있는 로직이 있음. 
 : 새로운 가전제품을 가정 자동화 시스템에 추가해도, 미디에이터만 수정하면 됨.
+
+![after_mediator](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/sgmsgood/AfterMediator.jpg)
+
+
 
 ChatRoom.java
 ```java
