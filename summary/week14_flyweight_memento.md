@@ -63,7 +63,7 @@ public class Client {
 
 ### 플라이웨이트 패턴으로 구현
 #### Tree 클래스 다이어그램
-![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree2.png)
+![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree3.png)
 
 #### Tree 클래스를 인터페이스로 변경
 ```java
@@ -115,15 +115,15 @@ public class Client {
         int[][] pineTrees = {{5, 2, 2}, {12, 6, 3}, {7, 8, 6}, {5, 2, 8}};
         int[][] baobabTrees = {{30, 7, 5}, {15, 1, 6}, {8, 9, 8}};
         TreeFactory treeFactory = new TreeFactory(); // creates the two flyweights
-        Tree d, c;
+        Tree pine, baobab;
         try {
-            d = treeFactory.getTree("pine");
-            c = treeFactory.getTree("baobab");
+            pine = treeFactory.getTree("pine");
+            baobab = treeFactory.getTree("baobab");
             for (int[] pineTree : pineTrees) {
-                d.display(pineTree[0], pineTree[1], pineTree[2]);
+                pine.display(pineTree[0], pineTree[1], pineTree[2]);
             }
             for (int[] baobabTree : baobabTrees) {
-                c.display(baobabTree[0], baobabTree[1], baobabTree[2]);
+                baobab.display(baobabTree[0], baobabTree[1], baobabTree[2]);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -171,7 +171,7 @@ public class Client {
 #### 롤플레잉 게임 클래스 다이어그램
 ![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/memento.png)
   
-####  
+####  코드
 
 ### 메멘토 패턴 정리
 #### 장점  
