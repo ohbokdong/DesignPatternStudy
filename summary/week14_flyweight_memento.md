@@ -108,7 +108,7 @@ public class TreeFactory {
     }
 }
 ```
-#### 클라이언트
+#### 클라이언트 클래스
 ```java
 public class Client {
     public static void main(String[] args) {
@@ -131,14 +131,9 @@ public class Client {
     }
 }
 ```
-<<<<<<< HEAD
-=======
-  
 ```
 결과 콘솔 이미지
 ```
-
->>>>>>> bb416f8771d1b0f151666d335c673e90b29505c8
 
 ### 플라이웨이트 패턴 정리
 #### 장점
@@ -172,9 +167,12 @@ public class Client {
 단일 역할 원칙(single responsibility principle)을 떠올려 본다면, 저장하고자 하는 상태를 핵심 객체로부터 분리시키는 것이 좋음.
 상태를 따로 저장하는 역할을 맡는 객체를 **메멘토 객체**라고 부름.
   
+### 메멘토 패턴 적용
 #### 롤플레잉 게임 클래스 다이어그램
 ![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/memento.png)
   
+####  
+
 ### 메멘토 패턴 정리
 #### 장점  
 - 저장된 상태를 핵심 객체와는 다른 별도의 객체에 보관하기 때문에 안전함
