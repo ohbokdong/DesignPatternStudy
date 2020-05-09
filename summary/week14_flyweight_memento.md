@@ -58,30 +58,71 @@ public class Client {
     }
 }
 ```
-복잡하지 않지만 본 애플리케이션의 문제는 나무를 많이 만들수록 눈에 띄게 느려짐
+### 문제점
+- 복잡하지 않지만 본 애플리케이션의 문제는 나무를 많이 만들수록 눈에 띄게 느려짐
 
-### 왜 플라이웨이트 패턴을 사용해야 하나?
-- 위와 같이 동일하거나 비슷한 객체를 많이 사용해야 할 때 매번 새로운 객체를 생성하는 대신 하나의 객체를 공유하여 효율적으로 자원을 활용할 수 있음
 
 ### 플라이웨이트 패턴으로 구현
 #### Tree 클래스 다이어그램
 ![class diagram](https://github.com/ohbokdong/DesignPatternStudy/blob/master/summary/img/week14/rlawjddbs/tree2.png)
 
-#### Tree 클래스와 클라이언트 코드
+#### Tree 클래스를 인터페이스로 변경
+```java
+public interface Tree {
+    public void display(int age, int x, int y);
+}
+```
+#### Tree 인터페이스를 구현한 소나무, 바오밥나무 클래스
+```java
+// 소나무
+public class PineTree implements Tree {
+    @Override
+    public void display(int age, int x, int y) {
+        System.out.println("[소나무 수령 : " + age + "년 / x좌표 : " + x + "/ y좌표 : " + y + "]");
+    } // display
+} // class
 
+// 바오밥나무
+public class BaobabTree implements Tree {
+    @Override
+    public void display(int age, int x, int y) {
+        System.out.println("[바오밥나무 수령 : " + age + "년 / x좌표 : " + x + "/ y좌표 : " + y + "]");
+    } // display
+} // class
+```
+####  나무를 생성할 팩토리 메소드
+```java
+public class TreeFactory {
+    private Tree pineTree, baobabTree = null;
+    public TreeFactory() {
+        this.pineTree = new PineTree();
+        this.baobabTree = new BaobabTree();
+    }
+    public Tree getTree(String type) throws Exception {
+        if (type.equals("pine")) {
+            return this.pineTree;
+        } else if (type.equals("baobab")) {
+            return this.baobabTree;
+        } else {
+            throw new Exception("구할 수 없는 나무 종류 : " + type);
+        }
+    }
+}
+```
 
+### 플라이웨이트 패턴 정리
 #### 장점
+- 위와 같이 동일하거나 비슷한 객체를 많이 사용해야 할 때 매번 새로운 객체를 생성하는 대신 하나의 객체를 공유하여 효율적으로 자원을 활용할 수 있음
 - 객체의 수를 줄인다. 따라서 필요한 메모리의 크기를 줄인다.
 - 객체가 지속되는 경우에 필요한 메모리 및 저장 장치의 양을 줄인다.
 
 #### 단점
-- 특정 인스턴스의 공유 컴포넌트를 다르게 행동하게 하는 것이 불가능하다.
+- 특정 인스턴스의 공유 컴포넌트를 개별적인 방식으로 행동하게 하는 것이 불가능하다.
 
 #### 사용시기
 - 응용프로그램이 많은 수의 객체를 사용하는 경우
 - 물체의 수량으로 인해 저장비용이 높은 경우
 - 응용프로그램이 객체 ID에 의존하지 않는 경우
-
 -------------------------------
 
 ## Memento(메멘토 패턴)
