@@ -106,6 +106,14 @@ public class Run {
     }
 }
 ```
+result
+```java
+true
+true
+false
+true
+false
+```
 
 # Mediator 패턴
 1. 정의 </br>
