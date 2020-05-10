@@ -87,29 +87,23 @@ public class AndExpression implements Expression {
 ```
 InterpreterPatternDemo.java
 ```java
-public class InterpreterPatternDemo {
+public class Run {
+    public static void main(String[] args) {
+        Expression person1 = new TerminalExpression("Kushagra");
+        Expression person2 = new TerminalExpression("Lokesh");
+        Expression isSingle = new OrExpression(person1, person2);
 
-   //Rule: Robert and John are male
-   public static Expression getMaleExpression(){
-      Expression robert = new TerminalExpression("Robert");
-      Expression john = new TerminalExpression("John");
-      return new OrExpression(robert, john);		
-   }
+        Expression vikram = new TerminalExpression("Vikram");
+        Expression committed = new TerminalExpression("Committed");
+        Expression isCommitted = new AndExpression(vikram, committed);
 
-   //Rule: Julie is a married women
-   public static Expression getMarriedWomanExpression(){
-      Expression julie = new TerminalExpression("Julie");
-      Expression married = new TerminalExpression("Married");
-      return new AndExpression(julie, married);		
-   }
+        System.out.println(isSingle.interpreter("Kushagra"));
+        System.out.println(isSingle.interpreter("Lokesh"));
+        System.out.println(isSingle.interpreter("Achint"));
 
-   public static void main(String[] args) {
-      Expression isMale = getMaleExpression();
-      Expression isMarriedWoman = getMarriedWomanExpression();
-
-      System.out.println("John is male? " + isMale.interpret("John"));
-      System.out.println("Julie is a married women? " + isMarriedWoman.interpret("Married Julie"));
-   }
+        System.out.println(isCommitted.interpreter("Committed, Vikram"));
+        System.out.println(isCommitted.interpreter("Single, Vikram"));
+    }
 }
 ```
 
