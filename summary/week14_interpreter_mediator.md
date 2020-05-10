@@ -186,3 +186,8 @@ public class MediatorPatternDemo {
    }
 }
 ```
+result
+```java
+Thu Jan 31 16:05:46 IST 2013 [Robert] : Hi! John! 
+Thu Jan 31 16:05:46 IST 2013 [John] : Hello! Robert!
+```
